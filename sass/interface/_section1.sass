@@ -1,0 +1,146 @@
+.section1
+    height: 650px   
+    background: #FBFBFB
+    position: relative
+    overflow: hidden
+
+    .man1, .man2
+        position: absolute
+        width: 28%
+
+    .man1
+        top: -50px
+        left: 0
+
+    .man2
+        bottom: -20px
+        right: 0
+
+    &-content
+        position: relative
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        h1.section1-title
+            margin-bottom: 40px
+            text-align: center
+            color: #292739
+            font-weight: bold
+            font-size: 30px
+            span
+                color: #FF8C22
+                font-weight: bold
+
+        .cartochki
+            position: relative
+            z-index: 1
+            display: flex
+            justify-content: center
+            align-items: center
+
+            .cart
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
+                align-items: center
+                padding: 0 30px
+
+                p
+                    text-align: center
+                    font-size: 18px
+
+@media (max-width: 768px)
+    .section1
+        height: 650px   
+        background: #FBFBFB
+        position: relative
+        overflow: hidden
+
+        &-content
+            position: relative
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+            h1.section1-title
+                margin-bottom: 40px
+                text-align: center
+                color: #292739
+                font-weight: bold
+                font-size: 20px
+                span
+                    color: #FF8C22
+                    font-weight: bold
+
+            .cartochki
+                position: relative
+                z-index: 1
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+
+                .cart
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: center
+                    margin-bottom: 20px
+                    &:last-child
+                        margin-bottom: 0
+
+                    p
+                        text-align: center
+                        font-size: 14px
+
+@media (max-width: 450px)
+    .section1
+        height: 650px   
+        background: #FBFBFB
+        position: relative
+        overflow: hidden
+
+        .man1, .man2
+            display: none
+
+        &-content
+            position: relative
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+            h1.section1-title
+                margin-bottom: 40px
+                text-align: center
+                color: #292739
+                font-weight: bold
+                font-size: 16px
+                span
+                    color: #FF8C22
+                    font-weight: bold
+
+            .cartochki
+                position: relative
+                z-index: 1
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+
+                .cart
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: center
+                    margin-bottom: 20px
+                    &:last-child
+                        margin-bottom: 0
+                    img
+                        width: 15%
+                    p
+                        text-align: center
+                        font-size: 14px

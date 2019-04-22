@@ -1,0 +1,325 @@
+.header
+    position: relative
+    height: 100vh
+    background: url(../image/header/header-fon.png) no-repeat top
+    background-size: cover
+    padding-top: 50px
+    max-height: 1150px
+
+    &-nav
+        .navbar
+            padding: 0
+            .navbar-brand
+                margin: 0
+            .navbar-collapse
+                .nav
+                    .navbar-nav
+                        .nav-item
+                            margin: 0 25px
+                            &:last-child
+                                margin-right: 0
+                            &:first-child
+                                margin-left: 0
+                            a.nav-link
+                                color: #fff
+                                opacity: 1
+                                font-size: 18px
+                                &:hover
+                                    color: #FF8C22
+
+                .phone
+                    display: none
+                    a
+                        color: #fff
+                        font-size: 18px
+                        font-weight: normal
+                        &:hover
+                            color: #FF8C22 
+
+            .phone
+                a
+                    color: #fff
+                    font-size: 18px
+                    font-weight: normal
+                    &:hover
+                        color: #FF8C22     
+
+    &-mane
+        height: 600px
+        width: 100%
+        &-content
+            height: 100%
+            display: flex
+            width: 100%
+            flex-direction: column
+            justify-content: center
+            align-items: flex-start
+
+            h1, h3
+                color: #fff
+                font-size: 36px
+                font-weight: bold
+                line-height: normal
+            p
+                margin-top: 37px
+                color: rgba(255, 255, 255, 0.98)
+                font-weight: normal
+                font-size: 18px
+
+                span
+                    color: #FF8C22
+            .header-button
+                margin-top: 30px
+                width: 400px
+                height: 60px
+                text-transform: uppercase
+                font-size: 16px
+                font-weight: normal
+                text-align: center
+                color: #fff
+
+    &-bottom
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: auto
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        .point
+            position: relative
+            width: 100%
+            display: flex
+            justify-content: flex-end
+            overflow: hidden
+            .point1
+                bottom: -60px
+                right: 60px
+                position: absolute 
+            .point2
+        &-content
+            display: flex
+            justify-content: flex-end
+            height: 150px
+
+            .cart
+                height: 100%
+                width: 300px
+                padding: 45px
+                p
+                    font-size: 18px
+                    color: #ffffff
+
+            .cart-1
+                background: #01193F
+            .cart-2
+                background: #324961
+            .cart-3
+                background: #151E2A
+
+//медиа-запросы
+
+
+@media (max-width: 1199px)
+    .header
+        min-height: 850px
+        max-height: 900px
+
+        &-nav
+            .navbar
+                .navbar-collapse
+                    .navbar-nav
+                        .nav-item
+                            margin: 0 20px
+                            a.nav-link
+                                font-size: 16px
+
+                .phone
+                    a
+                        font-size: 16px
+
+        &-mane
+            &-content
+
+                h1, h3
+                    font-size: 32px
+                p
+                    margin-top: 35px
+                    font-size: 16px
+                .header-button
+                    margin-top: 28px
+                    width: 350px
+                    height: 55px
+                    font-size: 14px
+
+        &-bottom
+            &-content
+                height: 120px
+                .cart
+                    width: 250px
+                    padding: 20px 40px
+                    p
+                        font-size: 16px
+
+@media (max-width: 991px)
+    .header
+        min-height: 800px
+        max-height: 850px
+        &-nav
+            .navbar
+                .navbar-collapse
+                    .nav 
+                        padding-top: 30px
+                        width: 100%
+                        height: 100%
+                        display: flex
+                        justify-content: space-between
+                        .navbar-nav
+                            display: flex
+                            flex-direction: row 
+                            .nav-item
+                                display: flex
+                                margin-right: auto
+                                &:last-child
+                                    margin-right: 20px
+                                a.nav-link
+                                    font-size: 16px
+                        
+                        .phone
+                            display: block
+                            display: flex
+                            align-items: center
+                            a
+                                font-size: 16px
+
+                .phone
+                    display: none
+
+        &-mane
+            &-content
+
+                h1, h3
+                    font-size: 32px
+                p
+                    margin-top: 35px
+                    font-size: 16px
+                .header-button
+                    margin-top: 28px
+                    width: 350px
+                    height: 55px
+                    font-size: 14px
+
+        &-bottom
+            &-content
+                height: 120px
+                .cart
+                    width: 250px
+                    padding: 20px 40px
+                    p
+                        font-size: 16px
+
+@media (max-width: 768px)
+    .header
+        &-bottom
+            &-content
+                width: 100%
+                height: 150px
+                .cart
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 33.333333%
+                    padding: 0
+                    p
+                        font-size: 14px
+
+@media (max-width: 575px)
+    .header
+        &-nav
+            .navbar
+                .navbar-collapse
+                    .nav 
+                        .navbar-nav
+                            justify-content: center
+                            margin-right: 0
+                            width: 100%
+                            .nav-item
+                                a.nav-link
+                                    font-size: 12px
+                        
+                        .phone
+                            display: block
+                            display: flex
+                            align-items: center
+                            a
+                                font-size: 12px
+        &-mane
+            &-content
+                align-items: center
+
+                h1, h3
+                    text-align: center
+                    font-size: 25px
+                p
+                    text-align: center
+                    margin-top: 35px
+                    font-size: 14px
+                .header-button
+                    margin-top: 28px
+                    width: 250px
+                    height: 45px
+                    font-size: 12px
+        &-bottom
+            &-content
+                .cart
+                    p
+                        font-size: 12px
+
+@media (max-width: 450px)
+    .header
+        min-height: 0
+        max-height: none
+        &-nav
+            .navbar
+                .navbar-collapse
+                    .nav 
+                        flex-direction: column
+                        .navbar-nav
+                            flex-direction: column
+                            justify-content: flex-end
+                            margin-right: 0
+                            width: 100%  
+                            .nav-item
+                                margin: 0
+                                a.nav-link
+                                    font-size: 12px
+                        
+                        .phone
+                            display: block
+                            display: flex
+                            align-items: center
+                            a
+                                font-size: 12px
+        &-mane
+            height: 400px
+            &-content
+                align-items: center
+
+                h1, h3
+                    text-align: center
+                    font-size: 20px
+                p
+                    text-align: center
+                    margin-top: 35px
+                    font-size: 12px
+                .header-button
+                    margin-top: 28px
+                    width: 250px
+                    height: 45px
+                    font-size: 10px
+        &-bottom
+            &-content
+                .cart
+                    p
+                        font-size: 10px
