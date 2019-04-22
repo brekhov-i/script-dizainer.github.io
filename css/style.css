@@ -413,6 +413,9 @@ a:hover, a:focus {
     height: 45px;
     font-size: 12px;
   }
+  .header-bottom .point {
+    display: none;
+  }
   .header-bottom-content .cart p {
     font-size: 12px;
   }
