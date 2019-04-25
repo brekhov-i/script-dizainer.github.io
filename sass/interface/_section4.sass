@@ -1,0 +1,56 @@
+.section4
+    height: 3300px
+    background: url(../image/section4/section4-fon.svg) no-repeat center
+    background-size: cover
+    &-content
+        padding: 100px 0
+        #carouselExampleIndicators
+            height: auto
+            .carousel-inner
+                height: auto
+                .carousel-item
+                    height: auto
+                    .carousel-slide
+                        width: 100%
+                        height: 400px
+                    .slide-1
+                        background-color: red
+
+                    .slide-2
+                        background-color: green
+
+                    .slide-3
+                        background-color: blue
+                
+            .carousel-indicators
+                position: relative
+                width: 100%
+                margin: 0
+                margin-bottom: 30px
+                display: flex
+                justify-content: space-around
+                align-items: center
+                transition: 0.5s all
+                .dot-1, .dot-2, .dot-3
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    p
+                        color: #fff
+                        text-align: center
+                .dot-1
+                    margin-top: -111px
+                &:before, &:after
+                    top: 0%
+                    transform: translateY(-2.5px)
+                    z-index: 1
+                    position: absolute
+                    content: ''
+                    width: 50%
+                    height: 5px
+                    background-color: #fff
+                &:before
+                    left: 0
+                &:after
+                    right: 0
