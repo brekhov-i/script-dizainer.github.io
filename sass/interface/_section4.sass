@@ -1,9 +1,30 @@
 .section4
-    height: 3300px
-    background: url(../image/section4/section4-fon.svg) no-repeat center
+    position: relative
+    height: auto
+    background: url(../image/section4/section4-fon.svg) no-repeat top
+    background-position-y: -30px
     background-size: cover
+    padding: 50px 0
+    padding-bottom: 0
+    &:after
+        z-index: 1
+        content: ''
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 30%
+        background: linear-gradient(180deg, rgba(34, 42, 57, 0) 0%, #10141C 100%)
     &-content
+        position: relative
+        z-index: 2
         padding: 100px 0
+        padding-bottom: 0
+        .section4-title
+            font-weight: bold
+            font-size: 30px
+            text-align: center
+            color: #fff
+            margin-bottom: 180px
         #carouselExampleIndicators
             height: auto
             .carousel-inner
@@ -12,39 +33,129 @@
                     height: auto
                     .carousel-slide
                         width: 100%
-                        height: 400px
-                    .slide-1
-                        background-color: red
+                        height: auto
+                    .carousel-slide
+                        background-color: #fff
+                        padding: 100px 50px
+                        .content-block1
+                            display: flex
+                            align-items: center
+                            flex-direction: column
 
-                    .slide-2
-                        background-color: green
+                            .slide-title
+                                font-weight: bold
+                                font-size: 25px
+                                text-align: center
+                            .row1, .row2, .row3
+                                display: flex
+                                justify-content: space-between
+                                align-items: center
+                                width: 100%
+                                margin-top: 50px
+                                .col1, .col2
+                                    display: flex
+                                    flex-direction: column
+                                    justify-content: flex-start
+                                    width: 50%
 
-                    .slide-3
-                        background-color: blue
-                
+                                    h1
+                                        font-weight: bold
+                                        font-size: 20px
+                                        margin-bottom: 20px
+                                    
+                                    ul
+                                        color: #FF8C22
+                                        li
+                                            margin-bottom: 20px
+                                            &:last-child
+                                                margin-bottom: 0
+                                            p
+                                                color: #000
+
+                                    img
+                                        width: 80%
+                                        height: auto
+
+                        .content-block2
+                            display: flex
+                            align-items: center
+                            flex-direction: column
+                            margin-top: 80px
+
+                            .slide-title
+                                font-weight: bold
+                                font-size: 25px
+                                text-align: center
+                                margin-bottom: 50px
+
+                            .row1, .row2, .row3
+                                display: flex
+                                width: 100%
+                                height: 80px
+
+                                .col1, .col2
+                                    display: flex
+                                    justify-content: flex-start
+                                    align-items: center
+                                    padding: 0 30px
+
+                                    p
+                                        color: #fff
+                                        font-weight: bold
+                                        font-size: 20px
+                                        margin-left: 5px
+
+                                .col2
+                                    justify-content: flex-end
+
+                                    p
+                                        font-weight: normal
+                                        color: #000
+                                        font-size: 18px
+                                        text-align: right
+
+                            .row1
+                                margin-bottom: 30px
+                                .col1
+                                    width: 32.5%
+                                    background: linear-gradient(90deg, #FF8C22 0%, rgba(255, 140, 34, 0.33) 100%)
+                                .col2
+                                    width: 67.5%
+                                    background: rgba(254, 210, 170, 0.33)
+
+                            .row2
+                                margin-bottom: 30px
+                                .col1
+                                    width: 27.5%
+                                    background: linear-gradient(270deg, rgba(255, 140, 34, 0.33) 0%, #FF8C22 100%)
+                                .col2
+                                    width: 72.5%
+                                    background: rgba(254, 210, 170, 0.33)
+
+                            .row3
+                                .col1
+                                    width: 40%
+                                    background: linear-gradient(89.66deg, #FF8C22 0.07%, rgba(255, 140, 34, 0.33) 97.59%)
+                                
+                                .col2
+                                    width: 60%
+                                    background: rgba(254, 210, 170, 0.33)
+                            
+
+
             .carousel-indicators
                 position: relative
                 width: 100%
                 margin: 0
-                margin-bottom: 30px
+                margin-bottom: 40px
                 display: flex
                 justify-content: space-around
                 align-items: center
                 transition: 0.5s all
-                .dot-1, .dot-2, .dot-3
-                    display: flex
-                    flex-direction: column
-                    justify-content: center
-                    align-items: center
-                    p
-                        color: #fff
-                        text-align: center
-                .dot-1
-                    margin-top: -111px
                 &:before, &:after
                     top: 0%
                     transform: translateY(-2.5px)
-                    z-index: 1
+                    z-index: 0
                     position: absolute
                     content: ''
                     width: 50%
@@ -54,3 +165,275 @@
                     left: 0
                 &:after
                     right: 0
+
+                .dot-1, .dot-2, .dot-3
+                    z-index: 3
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    p
+                        color: #fff
+                        text-align: center
+                    li
+                        position: relative
+                        background: #FF8C22
+                        opacity: 1
+                        border-radius: 100px
+                        width: 15px
+                        height: 15px
+                        border-width: 0
+                        &:after, &:before
+                            content: ''
+                            width: 100px
+                            position: absolute
+                            transform: translateY(4.5px)
+                            height: 5px
+                            background: transparent
+                        &:before
+                            left: 0
+                        &:after
+                            right: 0
+                        
+                    &.active
+                        li
+                            z-index: 2
+                            &:after, &:before
+                                background: #FF8C22
+                            
+                .dot-1, .dot-3
+                    transform: translateY(-75px)
+                    z-index: 3
+                    li
+                        margin-top: 20px
+                .dot-2
+                    z-index: 2
+                    transform: translateY(-7px)
+                    li
+                        margin-bottom: 20px
+
+            .numberslider
+                width: 100%
+                display: flex
+                justify-content: center
+                margin-bottom: 50px
+                p
+                    font-size: 18px
+                    font-weight: normal
+                    color: #fff
+
+                    output
+                        font-weight: bold
+                
+                .carousel-control-next, .carousel-control-prev
+                    position: relative
+                    opacity: 1
+                    width: auto
+                .carousel-control-prev
+                    margin-right: 20px
+                .carousel-control-next
+                    margin-left: 20px              
+
+
+@media (max-width: 991px)
+    .section4
+        &-content
+            #carouselExampleIndicators
+            height: auto
+            .carousel-inner
+                height: auto
+                .carousel-item
+                    height: auto
+                    .carousel-slide
+                        width: 100%
+                        height: auto
+                    .carousel-slide
+                        background-color: #fff
+                        padding: 100px 50px
+
+                        .content-block2
+                            .row1, .row2, .row3
+                                height: 70px
+                                .col2
+                                    p
+                                        font-size: 12px !important
+
+@media (max-width: 768px)
+    .section4
+        &-content
+            .section4-title
+                font-size: 20px
+            #carouselExampleIndicators
+                .carousel-inner
+                    .carousel-item
+                        .carousel-slide
+                            .content-block1
+                                .row1, .row2, .row3
+                                    flex-direction: column
+                                    .col1, .col2
+                                        width: 100% !important
+                                        img
+                                            width: 100% !important
+                                .row2
+                                    flex-direction: column-reverse
+                            .content-block2
+
+                                .slide-title
+                                    font-size: 20px
+                                .row1, .row2, .row3
+                                    height: 70px
+                                    .col2
+                                        p
+                                            font-size: 12px !important
+
+                .carousel-indicators
+                    .dot-1, .dot-2, .dot-3
+                        p
+                            color: #fff
+                            text-align: center
+                            font-size: 14px
+                        li
+                            position: relative
+                            background: #FF8C22
+                            opacity: 1
+                            border-radius: 100px
+                            width: 15px
+                            height: 15px
+                            border-width: 0
+                            &:after, &:before
+                                width: 50px !important
+                                
+                    .dot-1, .dot-3
+                        transform: translateY(-69px) !important
+                    .dot-2
+                        z-index: 2
+                        transform: translateY(-7px)
+
+@media (max-width: 575px)
+    .section4
+        &-content
+            .section4-title
+                font-size: 20px
+            #carouselExampleIndicators
+
+                .carousel-indicators
+                    .dot-1, .dot-2, .dot-3
+                        p
+                            font-size: 12px
+                        li
+                            &:after, &:before
+                                width: 50px !important
+                    .dot-1, .dot-3
+                        transform: translateY(-63px) !important
+
+                .carousel-inner
+                    .carousel-item
+                        .carousel-slide
+                            .content-block1
+                                .row1, .row2, .row3
+                                    flex-direction: column
+                                    .col1, .col2
+                                        width: 100% !important
+                                        img
+                                            width: 100% !important
+                                .row2
+                                    flex-direction: column-reverse
+                            .content-block2
+
+                                .slide-title
+                                    font-size: 20px
+                                .row1, .row2, .row3
+                                    height: auto
+                                    .col2
+                                        padding: 20px 5px
+                                        p
+                                            font-size: 8px !important
+
+@media (max-width: 470px)
+    .section4
+        &-content
+            .section4-title
+                font-size: 16px !important
+            #carouselExampleIndicators
+
+                .carousel-indicators
+                    .dot-1, .dot-2, .dot-3
+                        p
+                            font-size: 9px
+                        li
+                            &:after, &:before
+                                width: 50px !important
+                    .dot-1, .dot-3
+                        transform: translateY(-53px) !important
+
+                .carousel-inner
+                    .carousel-item
+                        .carousel-slide
+                            padding: 50px 25px 50px 40px !important
+                            .content-block1
+                                .slide-title
+                                    font-size: 14px !important
+                                .row1, .row2, .row3
+                                    flex-direction: column
+                                    .col1, .col2
+                                        width: 100% !important
+                                        img
+                                            width: 100% !important
+
+                                        h1
+                                            font-size: 16px
+                                        
+                                        ul
+                                            color: #FF8C22
+                                            li
+                                                margin-bottom: 5px
+                                                &:last-child
+                                                    margin-bottom: 0
+                                                p
+                                                    font-size: 12px
+                                .row2
+                                    flex-direction: column-reverse
+                            .content-block2
+
+                                .slide-title
+                                    font-size: 14px
+                                .row1, .row2, .row3
+                                    height: auto
+                                    .col1
+                                        padding-left: 15px
+                                    .col2
+                                        padding: 20px 5px
+                                        p
+                                            font-size: 6px !important
+
+@media (max-width: 365px)
+    .section4
+        &-content
+            padding: 0
+            .section4-title
+                font-size: 12px !important
+                margin-bottom: 70px
+            #carouselExampleIndicators
+
+                .carousel-indicators
+                    .dot-1, .dot-2, .dot-3
+                        p
+                            font-size: 6px
+                        li
+                            &:after, &:before
+                                width: 50px !important
+                    .dot-1, .dot-3
+                        transform: translateY(-45px) !important
+
+                .carousel-inner
+                    .carousel-item
+                        .carousel-slide
+                            .content-block1
+                                .row1, .row2, .row3
+                                    margin-top: 20px
+
+                            .content-block2
+                                .col1
+                                    padding-left: 15px
+                                    p
+                                        font-size: 14px !important
