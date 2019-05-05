@@ -1,0 +1,207 @@
+.section12
+    height: auto
+    background: #FBFBFB
+    padding: 100px 0
+
+    &-content
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        p.text
+            font-size: 24px
+            text-align: center
+
+        .vkladki
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 20px 0
+            margin-top: 50px
+
+            .vkladka
+                display: flex
+                justify-content: center
+                align-items: center
+                padding: 5px
+                background-color: #fff
+                margin: 0 10px
+                width: 370px
+                &:first-child
+                    margin-left: 0
+                &:last-child
+                    margin-right: 0
+
+
+                .content
+                    width: 100%
+                    height: auto
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: flex-start
+                    padding: 20px 0
+                    border: 1px solid rgba(0, 0, 0, 0.11)
+                    box-sizing: border-box
+                    padding-left: 30px
+
+                    p.number
+                        font-size: 18px
+                        font-weight: 600
+                        text-align: center
+                        border-bottom: 1px solid #FF8C22
+
+                    p.vkladka-text
+                        margin-top: 10px
+                        font-size: 18px
+
+        .new
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            margin-top: 40px
+
+        .statistika
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            margin-top: 50px
+            width: 100%
+            &-title
+                text-align: center
+            .cards
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                align-items: center
+                width: 100%
+
+                .cart
+                    display: flex
+                    justify-content: flex-start
+                    align-items: flex-start
+                    width: 390px
+                    margin-top: 50px
+
+                    p.text
+                        font-size: 18px
+                    img
+                        width: 9%
+                        margin-right: 10px
+
+        img.analitika
+            margin-top: 50px
+
+@media (max-width: 991px)
+    img.analitika
+        width: 100% !important
+@media (max-width: 575px)
+    .section12
+        padding: 50px 0
+        &-content
+            p.text
+                font-size: 12px
+            .title
+                font-size: 16px
+            .vkladki
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                padding: 20px 0
+                margin-top: 30px
+
+                .vkladka
+                    padding: 5px
+                    background-color: #fff
+                    width: 100%
+                    margin: 0 50px
+                    margin-bottom: 20px
+                    &:first-child
+                        margin-left: 50px
+                    &:last-child
+                        margin-right: 50px
+                        margin-bottom: 0
+
+                    .content
+                        width: 100%
+                        height: auto
+                        padding: 20px 30px
+                        border: 1px solid rgba(0, 0, 0, 0.11)
+                        box-sizing: border-box
+
+                        p.number
+                            font-size: 14px
+                            font-weight: 600
+                            text-align: center
+                            border-bottom: 1px solid #FF8C22
+
+                        p.vkladka-text
+                            margin-top: 10px
+                            font-size: 14px
+            .new
+                margin-top: 30px
+                
+                p
+                    font-size: 14px
+
+            img.analitika
+                width: 100%
+
+@media (max-width: 380px)
+    .section12
+        padding: 50px 0
+        &-content
+            p.text
+                font-size: 12px
+            .title
+                font-size: 16px
+            .vkladki
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                padding: 20px 0
+                margin-top: 30px
+
+                .vkladka
+                    padding: 5px
+                    background-color: #fff
+                    width: 100%
+                    margin: 0 50px
+                    margin-bottom: 20px
+                    &:first-child
+                        margin-left: 50px
+                    &:last-child
+                        margin-right: 50px
+                        margin-bottom: 0
+
+                    .content
+                        width: 100%
+                        height: auto
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: flex-start
+                        padding: 20px 30px
+                        border: 1px solid rgba(0, 0, 0, 0.11)
+                        box-sizing: border-box
+
+                        p.number
+                            font-size: 10px
+                            font-weight: 600
+                            text-align: center
+                            border-bottom: 1px solid #FF8C22
+
+                        p.vkladka-text
+                            margin-top: 10px
+                            font-size: 10px
+
+            .new
+                margin-top: 30px
+                
+                p
+                    font-size: 12px

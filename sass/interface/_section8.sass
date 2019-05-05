@@ -1,0 +1,267 @@
+.section8
+    height: auto
+    background: url(../image/section8/section8-fon.svg) no-repeat top
+    background-size: cover
+    padding: 100px 0 150px
+
+    &-content
+        height: auto
+        width: 100%
+
+        .section8-title
+            color: #fff
+
+        .video
+            margin-top: 50px
+            padding: 30px 0
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            p
+                text-align: center
+                font-size: 18px
+                font-weight: normal
+                color: #fff
+            
+            #video
+                margin-top: 30px
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 800px
+                height: 336px
+                background: url(../image/section8/video-fon.jpeg) no-repeat center
+                background-size: cover
+
+                button
+                    background: transparent
+                    border-width: 0
+                    border-radius: 100px
+                    overflow: hidden
+                    padding: 0px
+
+        .vkladki
+            margin-top: 100px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 100%
+
+            &-title
+                color: #fff
+                font-weight: 600
+                font-size: 30px
+                text-align: center
+
+            .content
+                margin-top: 80px
+                width: 100%
+                display: flex
+                justify-content: space-around
+                align-items: flex-start
+
+                .cart
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: center
+
+                    p
+                        text-align: center
+                        color: #fff
+                        font-size: 18px
+                        font-weight: normal
+
+        form.contactForm
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+            width: 100%
+            margin-top: 200px
+            padding: 0 100px
+            .form-input
+                display: flex
+                justify-content: space-between
+                width: 100%
+                margin-bottom: 80px 
+
+                input
+                    background: transparent
+                    border-width: 0
+                    border-bottom: 2px solid #C4C4C4
+                    width: 250px
+                    padding-bottom: 5px
+
+            button[type="submit"]
+                width: 416px
+                height: 83px
+                font-weight: normal
+                font-size: 16px
+                text-align: center
+
+@media (max-width: 991px)
+    .section8
+        &-content
+            .vkladki
+                &-title
+                    font-size: 22px
+                .content
+                    .cart
+                        p
+                            font-size: 14px
+            form.contactForm
+                padding: 0
+                input
+                    width: 200px !important
+
+@media (max-width: 768px)
+    .section8
+        &-content
+            .video
+                #video
+                    width: 500px
+                    height: 210px
+                    button
+                        height: 40px
+                        width: 40px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        img
+                            height: 100%
+                            width: 100%
+            .vkladki
+                .content
+                    justify-content: center
+                    align-items: center
+                    flex-direction: column
+                    .cart
+                        margin-bottom: 30px
+                        &:last-child
+                            margin-bottom: 0
+            form.contactForm
+                margin-top: 150px
+                .form-input 
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    margin-bottom: 20px !important
+                    .field-block
+                        width: 400px
+                        height: 60px    
+                        input
+                            width: 100% !important
+
+@media (max-width: 575px)
+    .section8
+        padding-bottom: 100px
+        &-content
+            .section8-title
+                font-size: 12px
+            .video
+                margin-top: 0px
+                p
+                    font-size: 6px
+                #video
+                    width: 300px
+                    height: 126px
+                    button
+                        height: 35px
+                        width: 35px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        img
+                            height: 100%
+                            width: 100%
+            .vkladki
+                margin-top: 40px
+                &-title
+                    font-size: 12px
+                .content
+                    margin-top: 20px
+                    .cart
+                        p
+                            font-size: 8px
+                        img
+                            height: 30px
+                            width: auto
+            form.contactForm
+                margin-top: 48px
+                padding: 0 20px
+                .form-input
+                    flex-direction: column
+                    margin-bottom: 30px 
+
+                    .field-block
+                        width: 100%
+                        height: 50px
+                        margin-bottom: 20px
+
+                        input
+                            height: 100%
+                            width: 100% 
+                            padding-bottom: 0px
+                        &:last-child
+                            margin-bottom: 0
+
+                button[type="submit"]
+                    width: 350px
+                    height: 65px
+                    font-size: 14px
+
+@media (max-width: 450px)
+
+            form.contactForm
+                margin-top: 48px
+                padding: 0 20px
+                .form-input
+                    flex-direction: column
+                    margin-bottom: 30px 
+
+                    .field-block
+                        width: 100%
+                        height: 40px
+                        margin-bottom: 15px
+
+                        input
+                            height: 100%
+                            width: 100% 
+                            padding-bottom: 0px
+                        &:last-child
+                            margin-bottom: 0
+
+                button[type="submit"]
+                    width: 300px
+                    height: 45px
+                    font-size: 12px
+
+@media (max-width: 380px)
+
+            form.contactForm
+                margin-top: 48px
+                padding: 0 20px
+                .form-input
+                    flex-direction: column
+                    margin-bottom: 30px 
+
+                    .field-block
+                        width: 100%
+                        height: 30px
+                        margin-bottom: 10px
+
+                        input
+                            height: 100%
+                            width: 100% 
+                            padding-bottom: 0px
+                            font-size: 12px
+                        &:last-child
+                            margin-bottom: 0
+
+                button[type="submit"]
+                    width: 250px
+                    height: 35px
+                    font-size: 10px

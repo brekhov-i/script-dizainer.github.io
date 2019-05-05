@@ -7,4 +7,8 @@ $(document).ready(function () {
         var carousel = $('#carouselExampleIndicators'), index = $('.carousel-item.active', carousel).index() + 1;
         $('#result').val(index);
     })
+    $('#carousel').on('slid.bs.carousel', function (e) {
+        var carousel = $('#carousel'), index = $('.carousel-item.active', carousel).index() + 1;
+        $('output[name="slidenumber"]').val(index);
+    })
 });

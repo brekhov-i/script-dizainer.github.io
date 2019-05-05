@@ -4,16 +4,16 @@
  */
 class Validator
 {
-	/**
+	/*
      * Проверяет валидный ли E-mail, если да, то
      * возвращает TRUE, в противном случае FALSE.
      * @param string $email
-     * @return boolean
+     * @return boolean */
      
 	public static function isValidEmail($email)
 	{
 		return filter_var($email, FILTER_VALIDATE_EMAIL);
-	}*/
+	}
 
 	/**
      * Проверяет валидный ли телефон, если да, то

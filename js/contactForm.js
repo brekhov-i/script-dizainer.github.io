@@ -15,15 +15,16 @@ jQuery(document).ready(function($) {
         
         event.preventDefault();
 
-        var form = $('#contactForm'),
-            button = $('#button'),
+        var button = $('#button'),
             answer = $('#answer'),
-            loader = $('#loader');
+            loader = $('#loader')
+            formID = $(this).attr('id'),
+            formNm = $('#' + formID);
 
         $.ajax({
             url: '../handler.php',
             type: 'POST',
-            data: form.serialize(),
+            data: formNm.serialize(),
             beforeSend: function() {
                 answer.empty();
                 button.attr('disabled', true).css('margin-bottom', '20px');
@@ -33,7 +34,7 @@ jQuery(document).ready(function($) {
                 loader.fadeOut(300, function() {
                     answer.text(result);
                 });
-                form.find('.field').val('');
+                formNm.find('.field').val('');
                 button.attr('disabled', false);
             },
             error: function() {

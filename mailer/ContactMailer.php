@@ -32,10 +32,10 @@ class ContactMailer
      * @param string $message
      * @return boolean
      */
-    public static function send($name, $phone )
+    public static function send($name, $phone, $email)
     {
 		    // Формируем тело письма
-		    $body = "Имя: " . $name . "\nТелефон: " . $phone;
+		    $body = "Имя: " . $name . "\nТелефон: " . $phone . "\nE-mail" . $email;
 
 		    // Создаем объект PHPMailer
         $mailer = new PHPMailer();
