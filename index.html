@@ -14,6 +14,69 @@
 
 </head>
 <body>
+    <!-- модальные окна -->
+
+    <div class="modal fade" id="registerform" tabindex="-1" role="dialog" aria-labelledby="registerformLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerformLabel">Регистрация</h5>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" class="contactForm" action="handler.php" method="POST">
+                        <div class="form-input">
+                            <div class="field-block">
+                                <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
+                            </div>
+                            <div class="field-block">
+                                <input id="phone" class="field" name="phone" required type="text" placeholder="Ваш телефон">
+                            </div>
+                            <div class="field-block">
+                                <input id="email" class="field" name="email" required type="email" placeholder="Ваш емэйл">
+                            </div>
+                        </div>
+                        <button id="button" class="btn button" type="submit">Зарегистрироваться</button>
+                        <div class="result d-none">
+                            <span id="answer"></span>
+                            <span id="loader"><img src="images/loader.gif" alt=""></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="vhodform" tabindex="-1" role="dialog" aria-labelledby="vhodformLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="vhodformLabel">Войти</h5>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" id="contactForm" class="contactForm" method="POST">
+                        <div class="form-input">
+                            <div class="field-block">
+                                <label for="login">Логин</label>
+                                <input type="text" class="login" id="login" required>
+                            </div>
+                            <div class="field-block">
+                                <label for="login">Пароль (<a href="#">Забыли пароль?</a>)</label>
+                                <input type="password" class="login" id="login" required>
+                            </div>
+                        </div>
+                        <button id="button" class="btn button" type="submit">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- header -->
     <header class="header">
@@ -31,19 +94,19 @@
                         <div class="nav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Зачем</a>
+                                    <a class="nav-link" href="#hvatit">Зачем</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Преимущества</a>
+                                    <a class="nav-link" href="#analitic">Преимущества</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Регистрация</a>
+                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#registerform">Регистрация</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Тарифы</a>
+                                    <a class="nav-link" href="#tarif">Тарифы</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Вход</a>
+                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#vhodform">Вход</a>
                                 </li>
                             </ul>
                             <div class="phone">
@@ -63,7 +126,7 @@
                     <h1 class="header-title">Конструктор скриптов продаж</h1>
                     <h3 class="header-text">«Скрипт Дизайнер» — <br> ваши звонки без косяков</h3>
                     <p>Повысьте конверсию звонков ваших <br>сотрудников <span>на 50-80%.</span></p>
-                    <button class="btn header-button">ХОЧУ ПОПРОБОВАТЬ БЕСПЛАТНО</button>
+                    <button class="btn header-button" data-toggle="modal" data-target="#registerform">ХОЧУ ПОПРОБОВАТЬ БЕСПЛАТНО</button>
                 </div>
             </div>
         </div>
@@ -121,7 +184,7 @@
     </section>
 
     <!-- section2 -->
-    <section class="section2">
+    <section class="section2" id="hvatit">
         <div class="container">
             <div class="section2-content">
                 <h1 class="section2-title"><span>Хватит терять клиентов!</span><br>Создавайте эффективные алгоритмы звонков <br> в конструкторе скриптов продаж «Скрипт Дизайнер»</h1>
@@ -917,7 +980,7 @@
     </section>
 
     <!-- section12 -->
-    <section class="section12">
+    <section class="section12" id="analitic">
         <div class="container">
             <div class="section12-content">
                 <p class="text">Ваш бизнес требует аналитики (и правильно делает)</p>
@@ -1159,7 +1222,7 @@
     </section>
 
     <!-- section15 -->
-    <section class="section15">
+    <section class="section15" id="tarif">
         <div class="container">
             <div class="section15-content">
                 <h1 class="title section15-title">Тарифные планы учитывают ваши<br>
@@ -1172,7 +1235,7 @@
                                 <p class="cena">0 р/мес</p>
                                 <p class="polzovateli">1 пользователь</p>
                                 <p>50 звонков/месяц</p>
-                                <a href="#" class="btn button_cart">ПОДКЛЮЧИТЬ</a>
+                                <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                         <div class="cart cart2">
@@ -1181,7 +1244,7 @@
                                 <p class="cena">500 р/мес</p>
                                 <p class="polzovateli">1 пользователь</p>
                                 <p>экспорт скриптов<br>безлимитные звонки</p>
-                                <a href="#" class="btn button_cart">ПОДКЛЮЧИТЬ</a>
+                                <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                         <div class="cart cart3">
@@ -1190,7 +1253,7 @@
                                 <p class="cena">1 370 р/мес</p>
                                 <p class="polzovateli">3 пользователь</p>
                                 <p>вы — администратор<br>безлимитные звонки</p>
-                                <a href="#" class="btn button_cart">ПОДКЛЮЧИТЬ</a>
+                                <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                     </div>
@@ -1201,7 +1264,7 @@
                                 <p class="cena">2 970 р/мес</p>
                                 <p class="polzovateli">10 пользователь</p>
                                 <p>вы — администратор<br>безлимитные звонки</p>
-                                <a href="#" class="btn button_cart">ПОДКЛЮЧИТЬ</a>
+                                <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                         <div class="collapse multi-collapse cart cart2" id="multiCollapseExample2">
@@ -1211,7 +1274,7 @@
                                 <p class="polzovateli">20 пользователь</p>
                                 <p>вы — администратор<br>безлимитные звонки</p>
                                 <p>При оплате годовой подписки — <br>обучение сотрудников в подарок</p>
-                                <a href="#" class="btn button_cart">ПОДКЛЮЧИТЬ</a>
+                                <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                         <div class="collapse multi-collapse cart cart3" id="multiCollapseExample3">
@@ -1221,7 +1284,7 @@
                                 <p class="polzovateli">30 пользователь</p>
                                 <p>вы — администратор<br>безлимитные звонки</p>
                                 <p>При оплате годовой подписки — <br>обучение сотрудников в подарок</p>
-                                <a href="#" class="btn button_cart">ПОДКЛЮЧИТЬ</a>
+                                <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                         <div class="collapse multi-collapse cart cart4" id="multiCollapseExample4">
@@ -1231,7 +1294,7 @@
                                 <p class="polzovateli">40 пользователь</p>
                                 <p>вы — администратор<br>безлимитные звонки</p>
                                 <p>При оплате годовой подписки — <br>обучение сотрудников в подарок</p>
-                                <a href="#" class="btn button_cart">ПОДКЛЮЧИТЬ</a>
+                                <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                         <div class="collapse multi-collapse cart cart5" id="multiCollapseExample5">
@@ -1241,7 +1304,7 @@
                                 <p class="polzovateli">50 пользователь</p>
                                 <p>вы — администратор<br>безлимитные звонки<br>запись разговоров по скриптам</p>
                                 <p>При оплате годовой подписки — <br>обучение сотрудников в подарок</p>
-                                <a href="#" class="btn button_cart">ПОДКЛЮЧИТЬ</a>
+                                <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                         <div class="collapse multi-collapse cart cart6" id="multiCollapseExample6">
@@ -1251,7 +1314,7 @@
                                 <p class="polzovateli">75 пользователь</p>
                                 <p>вы — администратор<br>безлимитные звонки<br>запись разговоров по скриптам</p>
                                 <p>При оплате годовой подписки — <br>обучение сотрудников в подарок</p>
-                                <a href="#" class="btn button_cart">ПОДКЛЮЧИТЬ</a>
+                                <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                         <div class="collapse multi-collapse cart cart7" id="multiCollapseExample7">
@@ -1264,7 +1327,7 @@
                                 <p>* У вас больше 100 сотрудников? <br>
                                 Оставьте заявку с пометкой «100+» <br>
                                 и получите выгодное предложение!</p>
-                                <a href="#" class="btn button_cart">ПОДКЛЮЧИТЬ</a>
+                                <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                     </div>
@@ -1438,47 +1501,93 @@
                 <div class="footer-content-logo col-lg-2 col-md-4 col-sm-12">
                     <img src="image/logo.png" alt="logo" class="logo">
                 </div>
-                <div class="footer-content-menu col-lg-2 col-md-4  col-sm-4">
-                    <h1 class="footer-content-menu_title">О КОМПАНИИ</h1>
-                    <ul>
-                        <li><a href="#" class="menu-link">Блог / новости</a></li>
-                        <li><a href="#" class="menu-link">Как внедрить</a></li>
-                        <li><a href="#" class="menu-link">Преимущества</a></li>
-                        <li><a href="#" class="menu-link">Регистрация</a></li>
-                        <li><a href="#" class="menu-link">Тарифы</a></li>
-                        <li><a href="#" class="menu-link">Контакты</a></li>
-                    </ul>
+                <div class="row col-10 footer-menu d-none d-md-flex">
+                    <div class="footer-content-menu col-lg-2 col-md-4 col-sm-4">
+                        <h1 class="footer-content-menu_title">О КОМПАНИИ</h1>
+                        <ul>
+                            <li><a href="#" class="menu-link">Блог / новости</a></li>
+                            <li><a href="#" class="menu-link">Как внедрить</a></li>
+                            <li><a href="#" class="menu-link">Преимущества</a></li>
+                            <li><a href="#" class="menu-link">Регистрация</a></li>
+                            <li><a href="#" class="menu-link">Тарифы</a></li>
+                            <li><a href="#" class="menu-link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-menu2 col-lg-2 col-md-4 col-sm-4">
+                        <h1 class="footer-content-menu_title">ПОМОЩЬ</h1>
+                        <ul>
+                            <li><a href="#" class="menu-link">FAQ</a></li>
+                            <li><a href="#" class="menu-link">Поддержка</a></li>
+                            <li><a href="#" class="menu-link">Примеры<br>скриптов</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-menu3 col-lg-3 col-md-4 col-sm-4">
+                        <h1 class="footer-content-menu_title">ПАРТНЕРЫ</h1>
+                        <ul>
+                            <li><a href="#" class="menu-link">Разработка скриптов<br>продаж</a></li>
+                            <li><a href="#" class="menu-link">Повышение продаж</a></li>
+                            <li><a href="#" class="menu-link">Как стать партнером</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-menu4 col-lg-3 col-md-4 col-sm-4">
+                        <h1 class="footer-content-menu_title">ДОПОЛНИТЕЛЬНО</h1>
+                        <ul>
+                            <li><a href="#" class="menu-link">Договор-оферта</a></li>
+                            <li><a href="#" class="menu-link">Обработка данных</a></li>
+                            <li><a href="#" class="menu-link">Лицензионный договор</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-menu5 col-lg-2 col-md-4 col-sm-4">
+                        <h1 class="footer-content-menu_title">ИНТЕГРАЦИИ</h1>
+                        <ul>
+                            <li><a href="#" class="menu-link">CRM системы</a></li>
+                            <li><a href="#" class="menu-link">Телефония</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-content-menu2 col-lg-2 col-md-4 col-sm-4">
-                    <h1 class="footer-content-menu_title">ПОМОЩЬ</h1>
-                    <ul>
-                        <li><a href="#" class="menu-link">FAQ</a></li>
-                        <li><a href="#" class="menu-link">Поддержка</a></li>
-                        <li><a href="#" class="menu-link">Примеры<br>скриптов</a></li>
-                    </ul>
-                </div>
-                <div class="footer-content-menu3 col-lg-2 col-md-4 col-sm-4">
-                    <h1 class="footer-content-menu_title">ПАРТНЕРЫ</h1>
-                    <ul>
-                        <li><a href="#" class="menu-link">Разработка скриптов<br>продаж</a></li>
-                        <li><a href="#" class="menu-link">Повышение продаж</a></li>
-                        <li><a href="#" class="menu-link">Как стать партнером</a></li>
-                    </ul>
-                </div>
-                <div class="footer-content-menu4 col-lg-2 col-md-4 col-sm-4">
-                    <h1 class="footer-content-menu_title">ДОПОЛНИТЕЛЬНО</h1>
-                    <ul>
-                        <li><a href="#" class="menu-link">Договор-оферта</a></li>
-                        <li><a href="#" class="menu-link">Обработка данных</a></li>
-                        <li><a href="#" class="menu-link">Лицензионный договор</a></li>
-                    </ul>
-                </div>
-                <div class="footer-content-menu5 col-lg-2 col-md-4 col-sm-4">
-                    <h1 class="footer-content-menu_title">ИНТЕГРАЦИИ</h1>
-                    <ul>
-                        <li><a href="#" class="menu-link">CRM системы</a></li>
-                        <li><a href="#" class="menu-link">Телефония</a></li>
-                    </ul>
+                <div class="footer-menu d-flex d-md-none">
+                    <div class="footer-content-menu col-lg-2 col-md-4  col-sm-4">
+                        <a class="footer-content-menu_title dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">О КОМПАНИИ</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="#" class="menu-link">Блог / новости</a></li>
+                            <li><a href="#" class="menu-link">Как внедрить</a></li>
+                            <li><a href="#" class="menu-link">Преимущества</a></li>
+                            <li><a href="#" class="menu-link">Регистрация</a></li>
+                            <li><a href="#" class="menu-link">Тарифы</a></li>
+                            <li><a href="#" class="menu-link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-menu2 col-lg-2 col-md-4 col-sm-4">
+                        <a class="footer-content-menu_title dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ПОМОЩЬ</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="#" class="menu-link">FAQ</a></li>
+                            <li><a href="#" class="menu-link">Поддержка</a></li>
+                            <li><a href="#" class="menu-link">Примеры<br>скриптов</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-menu3 col-lg-2 col-md-4 col-sm-4">
+                        <a class="footer-content-menu_title dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ПАРТНЕРЫ</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="#" class="menu-link">Разработка скриптов<br>продаж</a></li>
+                            <li><a href="#" class="menu-link">Повышение продаж</a></li>
+                            <li><a href="#" class="menu-link">Как стать партнером</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-menu4 col-lg-2 col-md-4 col-sm-4">
+                        <a class="footer-content-menu_title dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ДОПОЛНИТЕЛЬНО</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="#" class="menu-link">Договор-оферта</a></li>
+                            <li><a href="#" class="menu-link">Обработка данных</a></li>
+                            <li><a href="#" class="menu-link">Лицензионный договор</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-menu5 col-lg-2 col-md-4 col-sm-4">
+                        <a class="footer-content-menu_title dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ИНТЕГРАЦИИ</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="#" class="menu-link">CRM системы</a></li>
+                            <li><a href="#" class="menu-link">Телефония</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

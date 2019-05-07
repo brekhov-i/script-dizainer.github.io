@@ -164,6 +164,80 @@ h1.title span {
   }
 }
 
+#registerform .modal-dialog, #vhodform .modal-dialog {
+  width: 400px;
+}
+
+#registerform .modal-dialog .modal-content, #vhodform .modal-dialog .modal-content {
+  padding: 20px 0;
+}
+
+#registerform .modal-dialog .modal-content .modal-body form.contactForm, #vhodform .modal-dialog .modal-content .modal-body form.contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#registerform .modal-dialog .modal-content .modal-body form.contactForm .form-input, #vhodform .modal-dialog .modal-content .modal-body form.contactForm .form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#registerform .modal-dialog .modal-content .modal-body form.contactForm .form-input .field-block, #vhodform .modal-dialog .modal-content .modal-body form.contactForm .form-input .field-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#registerform .modal-dialog .modal-content .modal-body form.contactForm .form-input .field-block label, #vhodform .modal-dialog .modal-content .modal-body form.contactForm .form-input .field-block label {
+  font-weight: 600;
+}
+
+#registerform .modal-dialog .modal-content .modal-body form.contactForm .form-input .field-block label a, #vhodform .modal-dialog .modal-content .modal-body form.contactForm .form-input .field-block label a {
+  color: #007bff;
+}
+
+#registerform .modal-dialog .modal-content .modal-body form.contactForm .form-input .field-block input, #vhodform .modal-dialog .modal-content .modal-body form.contactForm .form-input .field-block input {
+  width: 100%;
+  background: transparent;
+  border-width: 0;
+  border: 1px solid #FF8C22;
+  margin-bottom: 10px;
+  height: 50px;
+  padding-left: 20px;
+}
+
+#registerform .modal-dialog .modal-content .modal-body form.contactForm button[type="submit"], #vhodform .modal-dialog .modal-content .modal-body form.contactForm button[type="submit"] {
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+}
+
 @media (max-width: 2000px) and (min-width: 1500px) {
   .header-bottom {
     position: absolute;
@@ -7788,6 +7862,17 @@ h1.title span {
   padding: 0 !important;
 }
 
+.footer-content .footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .footer-content-logo, .footer-content-menu, .footer-content-menu2, .footer-content-menu3, .footer-content-menu4, .footer-content-menu5 {
   padding: 0 !important;
 }
@@ -7827,12 +7912,25 @@ h1.title span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 0 !important;
+  }
+  .footer-content .footer-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer-content-logo {
     display: -webkit-box;
@@ -7848,7 +7946,7 @@ h1.title span {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    margin: 0 20px;
+    margin: 0px;
     margin-top: 20px;
   }
 }
