@@ -11,16 +11,23 @@
         flex-wrap: wrap
         padding: 0 !important
 
+        .col1, .col2
+            display: flex
+            flex-direction: column
+            flex: 0 0 auto
+
         .footer-menu
             display: flex
             justify-content: center
             flex-wrap: wrap
         &-logo, &-menu, &-menu2, &-menu3, &-menu4, &-menu5
             padding: 0 !important
+            flex: 0 0 auto
             &_title
                 font-size: 16px
                 text-transform: uppercase
                 color: #2C2A3A
+            
             
             ul
                 list-style: none

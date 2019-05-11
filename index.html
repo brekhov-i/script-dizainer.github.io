@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Скрипт дизайнер</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Prata&amp;subset=cyrillic" rel="stylesheet">
     <!-- Theme style -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/interface.css">
 </head>
 <body>
     <!-- модальные окна -->
@@ -26,22 +28,22 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="contactForm" class="contactForm" action="handler.php" method="POST">
+                    <form id="contactForm" class="contactForm" action="#" method="POST">
                         <div class="form-input">
-                            <div class="field-block">
+                            <div class="field-block name-field">
                                 <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                             </div>
                             <div class="field-block">
-                                <input id="phone" class="field" name="phone" required type="text" placeholder="Ваш телефон">
+                                <input type="tel" id="phone" class="field" required name="phone" placeholder="">
                             </div>
-                            <div class="field-block">
-                                <input id="email" class="field" name="email" required type="email" placeholder="Ваш емэйл">
+                            <div class="field-block email-field">
+                                <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                             </div>
                         </div>
                         <button id="button" class="btn button" type="submit">Зарегистрироваться</button>
-                        <div class="result d-none">
+                        <div class="result">
                             <span id="answer"></span>
-                            <span id="loader"><img src="images/loader.gif" alt=""></span>
+                            <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
                         </div>
                     </form>
                 </div>
@@ -62,13 +64,13 @@
                 <div class="modal-body">
                     <form action="#" id="contactForm" class="contactForm" method="POST">
                         <div class="form-input">
-                            <div class="field-block">
+                            <div class="field-block login-field">
                                 <label for="login">Логин</label>
-                                <input type="text" class="login" id="login" required>
+                                <input type="text" class="login" id="login" required placeholder="Введите логин">
                             </div>
-                            <div class="field-block">
+                            <div class="field-block password-field">
                                 <label for="login">Пароль (<a href="#">Забыли пароль?</a>)</label>
-                                <input type="password" class="login" id="login" required>
+                                <input type="password" class="login" id="login" required placeholder="Введите ваш пароль">
                             </div>
                         </div>
                         <button id="button" class="btn button" type="submit">Войти</button>
@@ -84,7 +86,7 @@
         <div class="header-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark">
-                    <a class="navbar-brand" href="index.html"><img src="image/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.html"><img class="lazy" data-src="image/logo.png" alt="logo"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -100,13 +102,13 @@
                                     <a class="nav-link" href="#analitic">Преимущества</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#registerform">Регистрация</a>
+                                    <a class="nav-link" data-toggle="modal" data-target="#registerform">Регистрация</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#tarif">Тарифы</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#vhodform">Вход</a>
+                                    <a class="nav-link" data-toggle="modal" data-target="#vhodform">Вход</a>
                                 </li>
                             </ul>
                             <div class="phone">
@@ -151,8 +153,8 @@
 
     <!-- section1 -->
     <section class="section1">
-        <img src="image/section1/мужчина 1.png" alt="man" class="man1">
-        <img src="image/section1/мужчина 2.png" alt="man" class="man2">
+        <img data-src="image/section1/мужчина 1.png" alt="man" class="man1 lazy">
+        <img data-src="image/section1/мужчина 2.png" alt="man" class="man2 lazy">
         <div class="container">
             <div class="section1-content">
                 <h1 class="section1-title">
@@ -160,20 +162,20 @@
                 </h1>
                 <div class="cartochki">
                     <div class="cart cart-1">
-                        <img src="image/icon-galochka.png" alt="">
+                        <img class="lazy" data-src="image/icon-galochka.png" alt="">
                         <p>
                             Нервничают, говорят невпопад, забывают задавать нужные вопросы и оказываются не готовы к форс-мажорам при общении с
                             клиентами...
                         </p>
                     </div>
                     <div class="cart cart-2">
-                        <img src="image/icon-galochka.png" alt="">
+                        <img class="lazy" data-src="image/icon-galochka.png" alt="">
                         <p>
                             Путаются в больших и сложных скриптах, оформленных в word, excel, html, mindmap, — и «сливают» теплах клиентов...
                         </p>
                     </div>
                     <div class="cart cart-3">
-                        <img src="image/icon-galochka.png" alt="">
+                        <img class="lazy" data-src="image/icon-galochka.png" alt="">
                         <p>
                             Неделями передают накопленный опыт и знания новичкам, отвлекаясь от основной работы; при этом новички тоже не продают...
                         </p>
@@ -196,7 +198,7 @@
                             правильных сценариев <br>
                             телефонных разговоров</h1>
                         </div>
-                        <img src="image/strelochka.svg" alt="стрелочка" class="strelochka">
+                        <img class="lazy" data-src="image/strelochka.svg" alt="стрелочка" class="strelochka">
                         <div class="number1">
                             <p>01</p>
                             <h6>Создавайте скрипты любой <br>
@@ -221,7 +223,7 @@
                                 ошибок во время<br>
                                 общения с клиентами</h1>
                         </div>
-                        <img src="image/strelochka.svg" alt="стрелочка" class="strelochka">
+                        <img class="lazy" data-src="image/strelochka.svg" alt="стрелочка" class="strelochka">
                         <div class="number1">
                             <p>01</p>
                             <h6>Выявляйте проблемные места<br>
@@ -245,7 +247,7 @@
                                 новичков и на 30% <br>
                                 меньше текучка кадров</h1>
                         </div>
-                        <img src="image/strelochka.svg" alt="стрелочка" class="strelochka">
+                        <img class="lazy" data-src="image/strelochka.svg" alt="стрелочка" class="strelochka">
                         <div class="number1">
                             <p>01</p>
                             <h6>Отлаживайте скрипты на основе <br>
@@ -273,22 +275,22 @@
             <div class="section3-content">
                 <h1 class="section3-title">Превратите холодные звонки в успешные<br>
                 сделки и повторные продажи</h1>
-                <form id="contactForm" class="contactForm" action="handler.php" method="POST">
+                <form id="contactForm" class="contactForm" action="#" method="POST">
                     <div class="form-input">
                         <div class="field-block">
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="text" placeholder="Ваш телефон">
+                            <input id="phone" class="field" name="phone" required type="tel" >
                         </div>
                         <div class="field-block">
-                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш емэйл">
+                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">ХОЧУ БОЛЬШЕ УСПЕШНЫХ СДЕЛОК</button>
                     <div class="result">
                         <span id="answer"></span>
-                        <span id="loader"><img src="images/loader.gif" alt=""></span>
+                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
                     </div>
                 </form>
             </div>
@@ -319,13 +321,13 @@
                         </div>                        
                     </ol>
                     <div class="numberslider">
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <img src="image/prevArrow.svg" alt="prev">
-                        </a>
+                        <button class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <img class="lazy" data-src="image/prevArrow.svg" alt="prev">
+                        </button>
                         <p><output name="slidenumber" id="result">1</output>/3</p>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <img src="image/nextArrow.svg" alt="next">
-                        </a>
+                        <button class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <img class="lazy" data-src="image/nextArrow.svg" alt="next">
+                        </button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -343,35 +345,35 @@
                                             </ul>
                                         </div>
                                         <div class="col2">
-                                            <img src="image/section4/row1.svg" alt="imgrow1">
+                                            <img class="lazy" data-src="image/section4/row1.svg" alt="imgrow1">
                                         </div>
                                     </div>
                                     <div class="row2">
                                         <div class="col1">
-                                            <img src="image/section4/row2.svg" alt="imgrow2">
+                                            <img class="lazy" data-src="image/section4/row2.svg" alt="imgrow2">
                                         </div>
                                         <div class="col2">
-                                            <h1>Информация о компании:</h1>
+                                            <h1>Задачи:</h1>
                                             <ul>
-                                                <li> <p>Срок работы 10 лет.</p></li>
-                                                <li> <p>В компании два отдела продаж общей численностью<br>40 человек.</p></li>
-                                                <li> <p>Среди менеджеров есть «новички» и «опытные» сотрудники.</p></li>
-                                                <li> <p>Менеджеры продают участки в коттеджных поселках,<br>а также строительные услуги.</p></li>
+                                                <li> <p>Повысить конверсии звонков и увеличить объемы продаж.</p></li>
+                                                <li> <p>Улучшить качество общения менеджеров с клиентами<br>по телефону.</p></li>
+                                                <li> <p>Избежать путаницы при работе с «длинными» скриптами.</p></li>
+                                                <li> <p>Контролировать работу менеджеров по продажам.</p></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="row3">
                                         <div class="col1">
-                                            <h1>Информация о компании:</h1>
+                                            <h1>Что было сделано:</h1>
                                             <ul>
-                                                <li> <p>Срок работы 10 лет.</p></li>
-                                                <li> <p>В компании два отдела продаж общей численностью<br>40 человек.</p></li>
-                                                <li> <p>Среди менеджеров есть «новички» и «опытные» сотрудники.</p></li>
-                                                <li> <p>Менеджеры продают участки в коттеджных поселках,<br>а также строительные услуги.</p></li>
+                                                <li> <p>Первый скрипт звонка команда написала самостоятельно<br>благодаря простоте использования сервиса.</p></li>
+                                                <li> <p>После завершения работы над скриптом пригласили<br>консультанта для его корректировки.</p></li>
+                                                <li> <p>В течение двух недель скрипт был подготовлен,<br>и по нему начался обзвон клиентов.</p></li>
+                                                <li> <p>На данный момент разработаны и используются 4 скрипта<br>в Скрипт Дизайнере (для исходящих холодных<br> и теплых звонков).</p></li>
                                             </ul>
                                         </div>
                                         <div class="col2">
-                                            <img src="image/section4/row3.svg" alt="imgrow3">
+                                            <img class="lazy" data-src="image/section4/row3.svg" alt="imgrow3">
                                         </div>
                                     </div>
                                 </div>
@@ -379,7 +381,7 @@
                                     <h1 class="slide-title">Что дало внедрение конструктора скриптов<br> продаж «Скрипт Дизайнер»:</h1>
                                     <div class="row1">
                                         <div class="col1">
-                                            <img src="image/arrow-down.svg" alt="arrowdown"><p>65%</p>
+                                            <img class="lazy" data-src="image/arrow-down.svg" alt="arrowdown"><p>65%</p>
                                         </div>
                                         <div class="col2">
                                             <p>Снижение ошибок во время активного обзвона клиентов,<br> грамотное выполнение холодных и теплых звонков.</p>
@@ -387,7 +389,7 @@
                                     </div>
                                     <div class="row2">
                                         <div class="col1">
-                                            <img src="image/arrow-up.svg" alt="arrowup"><p>55%</p>
+                                            <img class="lazy" data-src="image/arrow-up.svg" alt="arrowup"><p>55%</p>
                                         </div>
                                         <div class="col2">
                                             <p>Повышение конверсии отдела продаж.</p>
@@ -395,7 +397,7 @@
                                     </div>
                                     <div class="row3">
                                         <div class="col1">
-                                            <img src="image/arrow-down.svg" alt="arrowdown"><p>80%</p>
+                                            <img class="lazy" data-src="image/arrow-down.svg" alt="arrowdown"><p>80%</p>
                                         </div>
                                         <div class="col2">
                                             <p>Снижение количества неожиданных поворотов<br> в ходе разговора с клиентами.</p>
@@ -427,12 +429,12 @@
                                             </ul>
                                         </div>
                                         <div class="col2">
-                                            <img src="image/section4/row1.svg" alt="imgrow1">
+                                            <img class="lazy" data-src="image/section4/row1.svg" alt="imgrow1">
                                         </div>
                                     </div>
                                     <div class="row2">
                                         <div class="col1">
-                                            <img src="image/section4/row2.svg" alt="imgrow2">
+                                            <img class="lazy" data-src="image/section4/row2.svg" alt="imgrow2">
                                         </div>
                                         <div class="col2">
                                             <h1>Информация о компании:</h1>
@@ -471,7 +473,7 @@
                                             </ul>
                                         </div>
                                         <div class="col2">
-                                            <img src="image/section4/row3.svg" alt="imgrow3">
+                                            <img class="lazy" data-src="image/section4/row3.svg" alt="imgrow3">
                                         </div>
                                     </div>
                                 </div>
@@ -479,7 +481,7 @@
                                     <h1 class="slide-title">Что дало внедрение конструктора скриптов<br> продаж «Скрипт Дизайнер»:</h1>
                                     <div class="row1">
                                         <div class="col1">
-                                            <img src="image/arrow-down.svg" alt="arrowdown">
+                                            <img class="lazy" data-src="image/arrow-down.svg" alt="arrowdown">
                                             <p>65%</p>
                                         </div>
                                         <div class="col2">
@@ -489,7 +491,7 @@
                                     </div>
                                     <div class="row2">
                                         <div class="col1">
-                                            <img src="image/arrow-up.svg" alt="arrowup">
+                                            <img class="lazy" data-src="image/arrow-up.svg" alt="arrowup">
                                             <p>55%</p>
                                         </div>
                                         <div class="col2">
@@ -498,7 +500,7 @@
                                     </div>
                                     <div class="row3">
                                         <div class="col1">
-                                            <img src="image/arrow-down.svg" alt="arrowdown">
+                                            <img class="lazy" data-src="image/arrow-down.svg" alt="arrowdown">
                                             <p>80%</p>
                                         </div>
                                         <div class="col2">
@@ -531,12 +533,12 @@
                                             </ul>
                                         </div>
                                         <div class="col2">
-                                            <img src="image/section4/row1.svg" alt="imgrow1">
+                                            <img class="lazy" data-src="image/section4/row1.svg" alt="imgrow1">
                                         </div>
                                     </div>
                                     <div class="row2">
                                         <div class="col1">
-                                            <img src="image/section4/row2.svg" alt="imgrow2">
+                                            <img class="lazy" data-src="image/section4/row2.svg" alt="imgrow2">
                                         </div>
                                         <div class="col2">
                                             <h1>Информация о компании:</h1>
@@ -575,7 +577,7 @@
                                             </ul>
                                         </div>
                                         <div class="col2">
-                                            <img src="image/section4/row3.svg" alt="imgrow3">
+                                            <img class="lazy" data-src="image/section4/row3.svg" alt="imgrow3">
                                         </div>
                                     </div>
                                 </div>
@@ -583,7 +585,7 @@
                                     <h1 class="slide-title">Что дало внедрение конструктора скриптов<br> продаж «Скрипт Дизайнер»:</h1>
                                     <div class="row1">
                                         <div class="col1">
-                                            <img src="image/arrow-down.svg" alt="arrowdown">
+                                            <img class="lazy" data-src="image/arrow-down.svg" alt="arrowdown">
                                             <p>65%</p>
                                         </div>
                                         <div class="col2">
@@ -593,7 +595,7 @@
                                     </div>
                                     <div class="row2">
                                         <div class="col1">
-                                            <img src="image/arrow-up.svg" alt="arrowup">
+                                            <img class="lazy" data-src="image/arrow-up.svg" alt="arrowup">
                                             <p>55%</p>
                                         </div>
                                         <div class="col2">
@@ -602,7 +604,7 @@
                                     </div>
                                     <div class="row3">
                                         <div class="col1">
-                                            <img src="image/arrow-down.svg" alt="arrowdown">
+                                            <img class="lazy" data-src="image/arrow-down.svg" alt="arrowdown">
                                             <p>80%</p>
                                         </div>
                                         <div class="col2">
@@ -623,22 +625,22 @@
         <div class="container">
             <div class="section5-content">
                 <h1 class="section5-title">Хотите получить такой же результат?</h1>
-                <form id="contactForm" class="contactForm" action="handler.php" method="POST">
+                <form id="contactForm" class="contactForm" action="#" method="POST">
                     <div class="form-input">
                         <div class="field-block">
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="text" placeholder="Ваш телефон">
+                            <input id="phone" class="field" name="phone" required type="tel" >
                         </div>
                         <div class="field-block">
-                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш емэйл">
+                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">КОНЕЧНО, ХОЧУ!</button>
                     <div class="result d-none">
                         <span id="answer"></span>
-                        <span id="loader"><img src="images/loader.gif" alt=""></span>
+                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
                     </div>
                 </form>
             </div>
@@ -669,7 +671,7 @@
                             </div>
                         </div>
                         <div class="col2">
-                            <img src="image/section6/img1.jpeg" alt="A.B">
+                            <img data-src="image/section6/img1.jpeg" alt="A.B">
                         </div>
                     </div>
                     <div class="cart cart-2">
@@ -688,7 +690,7 @@
                             </div>
                         </div>
                         <div class="col2">
-                            <img src="image/section6/img2.jpeg" alt="A.B">
+                            <img class="lazy" data-src="image/section6/img2.jpeg" alt="A.B">
                         </div>
                     </div>
                 </div>
@@ -702,22 +704,22 @@
             <div class="section7-content">
                 <h1 class="section7-title">Узнайте в течение 24 часов, сработает ли конструктор
                 скриптов продаж для вашего бизнеса</h1>
-                <form id="contactForm" class="contactForm" action="handler.php" method="POST">
+                <form id="contactForm" class="contactForm" action="#" method="POST">
                     <div class="form-input">
                         <div class="field-block">
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="text" placeholder="Ваш телефон">
+                            <input id="phone" class="field" name="phone" required type="tel" >
                         </div>
                         <div class="field-block">
-                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш емэйл">
+                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</button>
                     <div class="result d-none">
                         <span id="answer"></span>
-                        <span id="loader"><img src="images/loader.gif" alt=""></span>
+                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
                     </div>
                 </form>
             </div>
@@ -732,54 +734,50 @@
                 <span>«Скрипт Дизайнер» максимально прост в использовании</span></h1>
                 <div class="video">
                     <p>Посмотрите 2-минутный видео-ролик и убедитесь, как легко и удобно работать в программе</p>
-                    <div id="video">
-                        <button>
-                            <img src="image/section8/play.png" alt="play">
-                        </button>
-                    </div>
+                    <div id="video" class="lazy" data-loader="youtubeLoader" data-video="LpjpF51Q9B4"></div>
                 </div>
                 <div class="vkladki">
                     <h1 class="vkladki-title">Благодаря нашей заботливой поддержке ни один <br>
                     вопрос не останется без ответа</h1>
                     <div class="content">
                         <div class="cart cart-1">
-                            <img src="image/section8/icons1.png" alt="icon1">
+                            <img class="lazy" data-src="image/section8/icons1.png" alt="icon1">
                             <p>Текстовые и видео-инструкции <br>
                             внутри конструктора <br>
                             скриптов продаж</p>
                         </div>
                         <div class="cart cart-2">
-                            <img src="image/section8/icons2.png" alt="icon2">
+                            <img class="lazy" data-src="image/section8/icons2.png" alt="icon2">
                             <p>30-минутная консультация в режиме <br>
                             онлайн с демонстрацией возможностей <br>
                             «Скрипт Дизайнер» в течение <br>
                             2-3 дней после регистрации</p>
                         </div>
                         <div class="cart cart-3">
-                            <img src="image/section8/icons3.png" alt="icon3">
+                            <img class="lazy" data-src="image/section8/icons3.png" alt="icon3">
                             <p>Серия обучающих писем<br>
                             с материалами по работе<br>
                             с программой</p>
                         </div>
                     </div>
                 </div>
-                <form id="contactForm" class="contactForm" action="handler.php" method="POST">
+                <form id="contactForm" class="contactForm" action="#" method="POST">
                     <div class="form-input">
                         <div class="field-block">
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="text" placeholder="Ваш телефон">
+                            <input id="phone" class="field" name="phone" required type="tel" >
                         </div>
                         <div class="field-block">
-                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш емэйл">
+                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">ПОЛЬЗОВАТЬСЯ «СКРИПТ ДИЗАЙНЕРОМ» <br>
                     БЕСПЛАТНО 14 ДНЕЙ</button>
                     <div class="result d-none">
                         <span id="answer"></span>
-                        <span id="loader"><img src="images/loader.gif" alt=""></span>
+                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
                     </div>
                 </form>
             </div>
@@ -788,22 +786,22 @@
 
     <!-- section9 -->
     <section class="section9">
-        <img src="image/section9/script1.png" alt="script" class="img1">
-        <img src="image/section9/script2.png" alt="script" class="img2">
+        <img data-src="image/section9/script1.png" alt="script" class="img1 lazy">
+        <img data-src="image/section9/script2.png" alt="script" class="img2 lazy">
         <div class="container">
             <h1 class="title section9-title"><span>Дарим 12 готовых шаблонов</span> скриптов<br>продаж сразу после регистрации</h1>
             <div class="section9-content">
                 <div class="row1">
                     <div class="cart col1 col-lg-3">
                         <div class="content">
-                            <img src="image/icon-lent.png" alt="icon" class="icon">
+                            <img class="lazy" data-src="image/icon-lent.png" alt="icon" class="icon">
                             <p class="text">5 скриптов<br>холодного звонка</p>
                         </div>
                     </div>
                     <div class="cart col2 col-lg-3">
                         <hr class="pravo">
                         <div class="content">
-                            <img src="image/plus.svg" alt="plus" class="plus">
+                            <img class="lazy" data-src="image/plus.svg" alt="plus" class="plus">
                         </div>
                         <hr class="niz">
                     </div>
@@ -812,7 +810,7 @@
                             <p class="text">3 скрипта<br>назначения встречи</p>
                         </div>
                         <div class="content d-flex d-sm-none">
-                            <img src="image/icon-lent.png" alt="icon" class="icon">
+                            <img class="lazy" data-src="image/icon-lent.png" alt="icon" class="icon">
                             <p class="text">2 скрипта<br>входящего звонка</p>
                         </div>
                     </div>
@@ -821,13 +819,13 @@
                     <div class="cart col1 col-lg-3">
                         <hr class="verh">
                         <div class="content">
-                            <img src="image/plus.svg" alt="plus" class="plus">
+                            <img class="lazy" data-src="image/plus.svg" alt="plus" class="plus">
                         </div>
                         <hr class="pravo">
                     </div>
                     <div class="cart col2 col-lg-3 ">
                         <div class="content d-none d-sm-flex">
-                            <img src="image/icon-lent.png" alt="icon" class="icon">
+                            <img class="lazy" data-src="image/icon-lent.png" alt="icon" class="icon">
                             <p class="text">2 скрипта<br>входящего звонка</p>
                         </div>
                         <div class="content d-flex d-sm-none">
@@ -837,7 +835,7 @@
                     <div class="cart col3 col-lg-3">
                         <hr class="verh">
                         <div class="content">
-                            <img src="image/plus.svg" alt="plus" class="plus">
+                            <img class="lazy" data-src="image/plus.svg" alt="plus" class="plus">
                         </div>
                         <hr class="pravo">
                     </div>
@@ -850,14 +848,14 @@
             </div>
             <div class="section9-vkladki">
                 <div class="vkladka vkladka1">
-                    <img src="image/section9/lent.png" alt="icon" class="icon">
+                    <img class="lazy" data-src="image/section9/lent.png" alt="icon" class="icon">
                     <p class="text">Только в «Скрипт Дизайнер»! <br>
                     2 универсальных скрипта<br>
                     разработаны под ваш бизнес. <br>
                     Куйте конверсию, пока горячо!</p>
                 </div>
                 <div class="vkladka vkladka2">
-                    <img src="image/icon2.png" alt="icon" class="icon">
+                    <img class="lazy" data-src="image/icon2.png" alt="icon" class="icon">
                     <p class="text">Скрипты содержат популярные <br>
                     возвражения с отработкой <br>
                     («Дорого», «Почему мы лучше», <br>
@@ -865,7 +863,7 @@
                     Клиенты не уйдут от вас без покупок!</p>
                 </div>
                 <div class="vkladka vkladka3">
-                    <img src="image/icon3.png" alt="icon" class="icon">
+                    <img class="lazy" data-src="image/icon3.png" alt="icon" class="icon">
                     <p class="text">Самые частые возражения <br>
                     содержат несколько вариантов <br>
                     отработки. Выбирайте подходящий <br>
@@ -881,23 +879,23 @@
             <div class="section10-content">
                 <h1 class="section10-title">Получите бесплатные скрипты<br>
                 под ваши бизнес-задачи</h1>
-                <form id="contactForm" class="contactForm" action="handler.php" method="POST">
+                <form id="contactForm" class="contactForm" action="#" method="POST">
                     <div class="form-input">
                         <div class="field-block">
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="text" placeholder="Ваш телефон">
+                            <input id="phone" class="field" name="phone" required type="tel" >
                         </div>
                         <div class="field-block">
-                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш емэйл">
+                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">ЗАРЕГИСТРИРОВАТЬСЯ И ПОЛУЧИТЬ БЕСПЛАТНЫЕ<br>
                     ШАБЛОНЫ СКРИПТОВ ПРОДАЖ</button>
                     <div class="result d-none">
                         <span id="answer"></span>
-                        <span id="loader"><img src="images/loader.gif" alt=""></span>
+                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
                     </div>
                 </form>
             </div>
@@ -912,15 +910,15 @@
                 популярные CRM-системы в 2 клика</h1>
                 <div class="logo">
                     <div class="img">
-                        <img src="image/section11/terrasoft.png" alt="terrasoft" class="logo-company terrasoft">
-                        <img src="image/section11/Bitrix24.png" alt="bitrix24" class="logo-company bitrix24">
-                        <img src="image/section11/amoCRM.png" alt="amoCRM" class="logo-company amoCRM">
+                        <img class="lazy" data-src="image/section11/terrasoft.png" alt="terrasoft" class="logo-company terrasoft">
+                        <img class="lazy" data-src="image/section11/Bitrix24.png" alt="bitrix24" class="logo-company bitrix24">
+                        <img class="lazy" data-src="image/section11/amoCRM.png" alt="amoCRM" class="logo-company amoCRM">
                     </div>
                     <p>И многие другие</p>
                 </div>
                 <div class="vkladki">
                     <div class="vkladka vkladka1 col-sm-6">
-                        <img src="image/icon12.png" alt="icon" class="icon">
+                        <img class="lazy" data-src="image/icon12.png" alt="icon" class="icon">
                         <div class="text">
                             <h3>Кроссплатформенность</h3>
                             <p>Пользуйтесь всеми функциями<br>
@@ -929,7 +927,7 @@
                         </div>
                     </div>
                     <div class="vkladka vkladka2 col-sm-6">
-                        <img src="image/icon11.png" alt="icon" class="icon">
+                        <img class="lazy" data-src="image/icon11.png" alt="icon" class="icon">
                         <div class="text">
                             <h3>Гибкий интерфейс</h3>
                             <p>Меняйте размер виджета, его<br>
@@ -938,7 +936,7 @@
                         </div>
                     </div>
                     <div class="vkladka vkladka3 col-sm-6">
-                        <img src="image/icon13.png" alt="icon" class="icon">
+                        <img class="lazy" data-src="image/icon13.png" alt="icon" class="icon">
                         <div class="text">
                             <h3>Виджет для CRM</h3>
                             <p>Запустите бесплатное расширение<br>
@@ -947,7 +945,7 @@
                         </div>
                     </div>
                     <div class="vkladka vkladka4 col-sm-6">
-                        <img src="image/icon10.png" alt="icon" class="icon">
+                        <img class="lazy" data-src="image/icon10.png" alt="icon" class="icon">
                         <div class="text">
                             <h3>Пошаговые видео-инструкции</h3>
                             <p>Легко адаптируйте готовые шаблоны<br>
@@ -955,24 +953,24 @@
                         </div>
                     </div>
                 </div>
-                <img src="image/section11/3.jpeg" alt="img" class="img">
-                <form id="contactForm" class="contactForm" action="handler.php" method="POST">
+                <img class="lazy img" data-src="image/section11/3.jpeg" alt="img" width="100%">
+                <form id="contactForm" class="contactForm" action="#" method="POST">
                     <div class="form-input">
                         <div class="field-block">
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="text" placeholder="Ваш телефон">
+                            <input id="phone" class="field" name="phone" required type="tel" >
                         </div>
                         <div class="field-block">
-                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш емэйл">
+                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">ПОЛЬЗОВАТЬСЯ КОНСТРУКТОРОМ СКРИПТОВ <br>
                     ПРОДАЖ БЕСПЛАТНО 14 ДНЕЙ</button>
                     <div class="result d-none">
                         <span id="answer"></span>
-                        <span id="loader"><img src="images/loader.gif" alt=""></span>
+                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
                     </div>
                 </form>
             </div>
@@ -1015,7 +1013,7 @@
                     </div>
                 </div>
                 <div class="new">
-                    <img src="image/icon-new.png" alt="new" class="new-icon">
+                    <img class="lazy new-icon" data-src="image/icon-new.png" alt="new">
                     <p>Добавлена новая функция — «Отчёт о популярных ответах»</p>
                 </div>
                 <div class="statistika">
@@ -1025,29 +1023,29 @@
                     </h1>
                     <div class="cards">
                         <div class="cart cart1">
-                            <img src="image/icon-galochka.png" alt="galochka">
+                            <img class="lazy" data-src="image/icon-galochka.png" alt="galochka">
                             <p class="text">Достигнута или не достигнута<br>
                                 цель по каждой сделке</p>
                         </div>
                         <div class="cart cart2">
-                            <img src="image/icon-galochka.png" alt="galochka">
+                            <img class="lazy" data-src="image/icon-galochka.png" alt="galochka">
                             <p class="text">Сколько узлов (реплик) <br>
                                 пройдено операторами</p>
                         </div>
                         <div class="cart cart3">
-                            <img src="image/icon-galochka.png" alt="galochka">
+                            <img class="lazy" data-src="image/icon-galochka.png" alt="galochka">
                             <p class="text">На какой реплике отработал/ <br>
                                 сломался скрипт</p>
                         </div>
                         <div class="cart cart4">
-                            <img src="image/icon-galochka.png" alt="galochka">
+                            <img data-src="image/icon-galochka.png" alt="galochka">
                             <p class="text">В чем состоит недостаток<br>
                                 скрипта и какой узел<br>
                                 нужно исправить</p>
                         </div>
                     </div>
                 </div>
-                <img src="image/section12/analitika.png" alt="analitika" class="analitika">
+                <img data-src="image/section12/analitika.png" alt="analitika" class="analitika lazy" width="100%">
             </div>
         </div>
     </section>
@@ -1058,22 +1056,22 @@
             <div class="section13-content">
                 <h1 class="section13-title">Зарегистрируйтесь в конструкторе скриптов «Скрипт Дизайнер»
                 и повышайте эффективность менеджеров</h1>
-                <form id="contactForm" class="contactForm" action="handler.php" method="POST">
+                <form id="contactForm" class="contactForm" action="#" method="POST">
                     <div class="form-input">
                         <div class="field-block">
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="text" placeholder="Ваш телефон">
+                            <input id="phone" class="field" name="phone" required type="tel" >
                         </div>
                         <div class="field-block">
-                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш емэйл">
+                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">ПОПРОБУЙТЕ БЕСПЛАТНО 14 ДНЕЙ</button>
                     <div class="result d-none">
                         <span id="answer"></span>
-                        <span id="loader"><img src="images/loader.gif" alt=""></span>
+                        <span id="loader"><img new-icon data-src="images/loader.gif" alt=""></span>
                     </div>
                 </form>
             </div>
@@ -1094,12 +1092,12 @@
                     </div>
                     <div class="cart cart2">
                         <div class="content">
-                            <img src="image/section14/img1.png" alt="">
+                            <img class="lazy" data-src="image/section14/img1.png" alt="">
                         </div>
                     </div>
                     <div class="cart cart3">
                         <div class="content">
-                            <img src="image/section14/img2.png" alt="">
+                            <img class="lazy" data-src="image/section14/img2.png" alt="">
                         </div>
                     </div>
                     <div class="cart cart4">
@@ -1122,7 +1120,7 @@
                     </div>
                     <div class="cart cart7">
                         <div class="content">
-                            <img src="image/section14/img3.png" alt="">
+                            <img class="lazy" data-src="image/section14/img3.png" alt="">
                         </div>
                     </div>
                     <div class="cart cart8">
@@ -1137,14 +1135,16 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="item-content">
-                                    <img src="image/section14/avatar.png" alt="avatar" class="avatar">
+                                    <img data-src="image/section14/avatar.png" alt="avatar" class="avatar lazy">
                                     <div class="text">
                                         <h2 class="title">Работать в СП одно удовольствие</h2>
                                         <p>Сервис класс. Холодные звонки — это, <br>
                                             оказывается, легко</p>
                                         <p class="name">Наталья Хальцева</p>
                                         <div class="button-play">
-                                            <button class="play"><img src="image/section14/play.png" alt=""></button>
+                                            <button class="play" id="play1"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
+                                            <button class="play" id="play2"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
+                                            <audio controls id="audio" data-src="audio/ХС и СД.mp3"></audio>
                                             <p class="buuton-text">Прослушать аудио</p>
                                         </div>
                                         <p class="zapytie">,,</p>
@@ -1153,14 +1153,16 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="item-content">
-                                    <img src="image/section14/avatar.png" alt="avatar" class="avatar">
+                                    <img data-src="image/section14/avatar.png" alt="avatar" class="avatar lazy">
                                     <div class="text">
                                         <h2 class="title">Работать в СП одно удовольствие</h2>
                                         <p>Сервис класс. Холодные звонки — это, <br>
                                             оказывается, легко</p>
                                         <p class="name">Наталья Хальцева</p>
                                         <div class="button-play">
-                                            <button class="play"><img src="image/section14/play.png" alt=""></button>
+                                            <button class="play" id="play3"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
+                                            <button class="play" id="play4"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
+                                            <audio controls id="audio1" data-src="audio/ХС и СД.mp3"></audio>
                                             <p class="buuton-text">Прослушать аудио</p>
                                         </div>
                                         <p class="zapytie">,,</p>
@@ -1169,14 +1171,16 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="item-content">
-                                    <img src="image/section14/avatar.png" alt="avatar" class="avatar">
+                                    <img data-src="image/section14/avatar.png" alt="avatar" class="avatar lazy">
                                     <div class="text">
                                         <h2 class="title">Работать в СП одно удовольствие</h2>
                                         <p>Сервис класс. Холодные звонки — это, <br>
                                             оказывается, легко</p>
                                         <p class="name">Наталья Хальцева</p>
                                         <div class="button-play">
-                                            <button class="play"><img src="image/section14/play.png" alt=""></button>
+                                            <button class="play" id="play5"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
+                                            <button class="play" id="play6"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
+                                            <audio controls id="audio2" data-src="audio/ХС и СД.mp3"></audio>
                                             <p class="buuton-text">Прослушать аудио</p>
                                         </div>
                                         <p class="zapytie">,,</p>
@@ -1185,35 +1189,35 @@
                             </div>
                         </div>
                         <div class="numberslider">
-                            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                                <img src="image/prevArrow.svg" alt="prev">
-                            </a>
+                            <button class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                                <img class="lazy" data-src="image/prevArrow.svg" alt="prev">
+                            </button>
                             <p><output name="slidenumber" id="result">1</output>/3</p>
-                            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                                <img src="image/nextArrow.svg" alt="next">
-                            </a>
+                            <button class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                                <img class="lazy" data-src="image/nextArrow.svg" alt="next">
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="section14-content_form">
                     <h1 class="section14-content_form_title title">Превратите холодные звонки в успешные<br>
                         сделки и повторные продажи</h1>
-                    <form id="contactForm" class="contactForm" action="handler.php" method="POST">
+                    <form id="contactForm" class="contactForm" action="#" method="POST">
                         <div class="form-input">
                             <div class="field-block">
                                 <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                             </div>
                             <div class="field-block">
-                                <input id="phone" class="field" name="phone" required type="text" placeholder="Ваш телефон">
+                                <input id="phone" class="field" name="phone" required type="tel" >
                             </div>
                             <div class="field-block">
-                                <input id="email" class="field" name="email" required type="email" placeholder="Ваш емэйл">
+                                <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                             </div>
                         </div>
                         <button id="button" class="btn button" type="submit">ПОПРОБУЙТЕ БЕСПЛАТНО 14 ДНЕЙ</button>
                         <div class="result d-none">
                             <span id="answer"></span>
-                            <span id="loader"><img src="images/loader.gif" alt=""></span>
+                            <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
                         </div>
                     </form>
                 </div>
@@ -1251,19 +1255,19 @@
                             <div class="content">
                                 <h1 class="cart-title">Бизнес 3</h1>
                                 <p class="cena">1 370 р/мес</p>
-                                <p class="polzovateli">3 пользователь</p>
-                                <p>вы — администратор<br>безлимитные звонки</p>
+                                <p class="polzovateli">3 пользователя</p>
+                                <p>безлимитные звонки</p>
                                 <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                     </div>
-                    <div class="row row2">
+                    <div class="row row2" id="myCollapse">
                         <div class="collapse multi-collapse cart cart1" id="multiCollapseExample1">
                             <div class="content">
                                 <h1 class="cart-title">Команда 10</h1>
                                 <p class="cena">2 970 р/мес</p>
-                                <p class="polzovateli">10 пользователь</p>
-                                <p>вы — администратор<br>безлимитные звонки</p>
+                                <p class="polzovateli">10 пользователей</p>
+                                <p>безлимитные звонки</p>
                                 <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
@@ -1271,9 +1275,8 @@
                             <div class="content">
                                 <h1 class="cart-title">Команда 20</h1>
                                 <p class="cena">5 500 р/мес</p>
-                                <p class="polzovateli">20 пользователь</p>
-                                <p>вы — администратор<br>безлимитные звонки</p>
-                                <p>При оплате годовой подписки — <br>обучение сотрудников в подарок</p>
+                                <p class="polzovateli">20 пользователей</p>
+                                <p>безлимитные звонки</p>
                                 <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
@@ -1281,9 +1284,8 @@
                             <div class="content">
                                 <h1 class="cart-title">Команда 30</h1>
                                 <p class="cena">7 500 р/мес</p>
-                                <p class="polzovateli">30 пользователь</p>
-                                <p>вы — администратор<br>безлимитные звонки</p>
-                                <p>При оплате годовой подписки — <br>обучение сотрудников в подарок</p>
+                                <p class="polzovateli">30 пользователей</p>
+                                <p>безлимитные звонки</p>
                                 <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
@@ -1291,9 +1293,8 @@
                             <div class="content">
                                 <h1 class="cart-title">Команда 40</h1>
                                 <p class="cena">8 800 р/мес</p>
-                                <p class="polzovateli">40 пользователь</p>
-                                <p>вы — администратор<br>безлимитные звонки</p>
-                                <p>При оплате годовой подписки — <br>обучение сотрудников в подарок</p>
+                                <p class="polzovateli">40 пользователей</p>
+                                <p>безлимитные звонки</p>
                                 <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
@@ -1301,9 +1302,8 @@
                             <div class="content">
                                 <h1 class="cart-title">Команда 50</h1>
                                 <p class="cena">9 750 р/мес</p>
-                                <p class="polzovateli">50 пользователь</p>
-                                <p>вы — администратор<br>безлимитные звонки<br>запись разговоров по скриптам</p>
-                                <p>При оплате годовой подписки — <br>обучение сотрудников в подарок</p>
+                                <p class="polzovateli">50 пользователей</p>
+                                <p>безлимитные звонки<br>запись разговоров по скриптам</p>
                                 <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
@@ -1311,64 +1311,62 @@
                             <div class="content">
                                 <h1 class="cart-title">Команда 75</h1>
                                 <p class="cena">14 625 р/мес</p>
-                                <p class="polzovateli">75 пользователь</p>
-                                <p>вы — администратор<br>безлимитные звонки<br>запись разговоров по скриптам</p>
-                                <p>При оплате годовой подписки — <br>обучение сотрудников в подарок</p>
+                                <p class="polzovateli">75 пользователей</p>
+                                <p>безлимитные звонки<br>запись разговоров по скриптам</p>
                                 <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                         <div class="collapse multi-collapse cart cart7" id="multiCollapseExample7">
                             <div class="content">
-                                <img src="image/icon-galochka.png" alt="galochka" class="galochka">
+                                <img data-src="image/icon-galochka.png" alt="galochka" class="galochka lazy">
                                 <h1 class="cart-title">Колл-центр*</h1>
                                 <p class="cena">19 500 р/мес</p>
-                                <p class="polzovateli">100 пользователь</p>
-                                <p>запись разговоров по скриптам<br>речевая аналитика звонков</p>
-                                <p>* У вас больше 100 сотрудников? <br>
-                                Оставьте заявку с пометкой «100+» <br>
+                                <p class="polzovateli">100 пользователей</p>
+                                <p>запись разговоров по скриптам речевая аналитика звонков</p>
+                                <p>* У вас больше 100 сотрудников? 
+                                Оставьте заявку с пометкой «100+» 
                                 и получите выгодное предложение!</p>
                                 <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
                     </div>
-                    <button class="btn button_tarifi" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" >ПОСМОТРЕТЬ ВСЕ ТАРИФЫ</button>
+                    <button class="btn button_tarifi" id="button-tarif1" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" >ПОСМОТРЕТЬ ВСЕ ТАРИФЫ</button>
+                    <!-- <button class="btn button_tarifi" id="button-tarif2" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" >СКРЫТЬ ВСЕ ТАРИФЫ</button> -->
                 </div>
-                <p class="oferta">Нажимая кнопку «ПОДКЛЮЧИТЬ», вы акцептируете оферту<br>
-                и соглашаетесь на обработку персональных данных.</p>
                 <div class="company-cart">
                     <div class="cart cart1">
                         <div class="content">
-                            <img src="image/section15/mir.png" alt="mir">
+                            <img class="lazy" data-src="image/section15/mir.png" alt="mir">
                         </div>
                     </div>
                     <div class="cart cart2">
                         <div class="content">
-                            <img src="image/section15/visa.png" alt="visa">
+                            <img class="lazy" data-src="image/section15/visa.png" alt="visa">
                         </div>
                     </div>
                     <div class="cart cart3">
                         <div class="content">
-                            <img src="image/section15/mastercard.png" alt="mastercard">
+                            <img class="lazy" data-src="image/section15/mastercard.png" alt="mastercard">
                         </div>
                     </div>
                     <div class="cart cart4">
                         <div class="content">
-                            <img src="image/section15/maestro.png" alt="maestro">
+                            <img class="lazy" data-src="image/section15/maestro.png" alt="maestro">
                         </div>
                     </div>
                     <div class="cart cart5">
                         <div class="content">
-                            <img src="image/section15/qiwi.png" alt="qiwi">
+                            <img class="lazy" data-src="image/section15/qiwi.png" alt="qiwi">
                         </div>
                     </div>
                     <div class="cart cart6">
                         <div class="content">
-                            <img src="image/section15/webmoney.png" alt="webmoney">
+                            <img class="lazy" data-src="image/section15/webmoney.png" alt="webmoney">
                         </div>
                     </div>
                     <div class="cart cart7">
                         <div class="content">
-                            <img src="image/section15/schet.png" alt="schet">
+                            <img class="lazy" data-src="image/section15/schet.png" alt="schet">
                         </div>
                     </div>
                 </div>
@@ -1409,7 +1407,7 @@
                     <div class="cartochki2">
                         <div class="cart cart1">
                             <div class="content">
-                                <img src="image/section16/men.png" alt="men">
+                                <img class="lazy" data-src="image/section16/men.png" alt="men">
                                 <p>Она будет доступна только <br>
                                 вам и сотрудникам, которых <br>
                                 вы пригласите на аккаунт <br>
@@ -1418,7 +1416,7 @@
                         </div>
                         <div class="cart cart2">
                             <div class="content">
-                                <img src="image/section16/mag.png" alt="magazin">
+                                <img class="lazy" data-src="image/section16/mag.png" alt="magazin">
                                 <p>Компания «Скрипт Дизайнер» <br>
                                 не вправе передавать <br>
                                 эту информацию <br>
@@ -1427,11 +1425,11 @@
                         </div>
                         <div class="cart cart3">
                             <div class="content">
-                                <img src="image/section16/ruka.png" alt="ruka">
+                                <img class="lazy" data-src="image/section16/ruka.png" alt="ruka">
                                 <p>Уникальные скрипты остаются <br>
                                 вашей собственностью даже <br>
                                 после истечении <br>
-                                определенного периода.</p>
+                                многих лет.</p>
                             </div>
                         </div>
                     </div>
@@ -1448,45 +1446,45 @@
                     <div class="cartochki2">
                         <div class="cart cart1">
                             <div class="content">
-                                <img src="image/icon-galochka.png" alt="">
+                                <img class="lazy" data-src="image/icon-galochka.png" alt="">
                                 <p>Персональный бессрочный<br>
                                 доступ к сервису</p>
                             </div>
                         </div>
                         <div class="cart cart2">
                             <div class="content">
-                                <img src="image/icon-galochka.png" alt="">
+                                <img class="lazy" data-src="image/icon-galochka.png" alt="">
                                 <p>12 шаблонов входящих<br>
                                 и исходящих звонков</p>
                             </div>
                         </div>
                         <div class="cart cart3">
                             <div class="content">
-                                <img src="image/icon-galochka.png" alt="">
+                                <img class="lazy" data-src="image/icon-galochka.png" alt="">
                                 <p>14 дней полного доступа<br>
                                 ко всем функциям</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <form id="contactForm" class="contactForm" action="handler.php" method="POST">
+                <form id="contactForm" class="contactForm" action="#" method="POST">
                     <div class="form-input">
                         <div class="field-block">
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="text" placeholder="Ваш телефон">
+                            <input id="phone" class="field" name="phone" required type="tel" >
                         </div>
                         <div class="field-block">
-                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш емэйл">
+                            <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">ПОПРОБОВАТЬ «СКРИПТ ДИЗАЙНЕР»</button>
                     <div class="result d-none">
                         <span id="answer"></span>
-                        <span id="loader"><img src="images/loader.gif" alt=""></span>
+                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
                     </div>
-                    <p class="oferta">Нажимая кнопку «ХОЧУ ПОПРОБОВАТЬ БЕСПЛАТНО», <br>
+                    <p class="oferta">Нажимая кнопку «ПОПРОБОВАТЬ «СКРИПТ ДИЗАЙНЕР», <br>
                     вы акцептируете оферту и соглашаетесь <br>
                     на обработку персональных данных.</p>
                 </form>
@@ -1499,10 +1497,10 @@
         <div class="container">
             <div class="row col-12 footer-content">
                 <div class="footer-content-logo col-lg-2 col-md-4 col-sm-12">
-                    <img src="image/logo.png" alt="logo" class="logo">
+                    <img data-src="image/logo.png" alt="logo" class="logo lazy">
                 </div>
                 <div class="row col-10 footer-menu d-none d-md-flex">
-                    <div class="footer-content-menu col-lg-2 col-md-4 col-sm-4">
+                    <div class="footer-content-menu col-lg-3 col-md-4 col-sm-4">
                         <h1 class="footer-content-menu_title">О КОМПАНИИ</h1>
                         <ul>
                             <li><a href="#" class="menu-link">Блог / новости</a></li>
@@ -1513,36 +1511,40 @@
                             <li><a href="#" class="menu-link">Контакты</a></li>
                         </ul>
                     </div>
-                    <div class="footer-content-menu2 col-lg-2 col-md-4 col-sm-4">
-                        <h1 class="footer-content-menu_title">ПОМОЩЬ</h1>
-                        <ul>
-                            <li><a href="#" class="menu-link">FAQ</a></li>
-                            <li><a href="#" class="menu-link">Поддержка</a></li>
-                            <li><a href="#" class="menu-link">Примеры<br>скриптов</a></li>
-                        </ul>
+                    <div class="col-lg-3 col1">
+                        <div class="footer-content-menu2 col-lg-12 col-md-4 col-sm-4">
+                            <h1 class="footer-content-menu_title">ПОМОЩЬ</h1>
+                            <ul>
+                                <li><a href="#" class="menu-link">FAQ</a></li>
+                                <li><a href="#" class="menu-link">Поддержка</a></li>
+                                <li><a href="#" class="menu-link">Примеры<br>скриптов</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-content-menu3 col-lg-12 col-md-4 col-sm-4">
+                            <h1 class="footer-content-menu_title">ПАРТНЕРЫ</h1>
+                            <ul>
+                                <li><a href="#" class="menu-link">Разработка скриптов<br>продаж</a></li>
+                                <li><a href="#" class="menu-link">Повышение продаж</a></li>
+                                <li><a href="#" class="menu-link">Как стать партнером</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="footer-content-menu3 col-lg-3 col-md-4 col-sm-4">
-                        <h1 class="footer-content-menu_title">ПАРТНЕРЫ</h1>
-                        <ul>
-                            <li><a href="#" class="menu-link">Разработка скриптов<br>продаж</a></li>
-                            <li><a href="#" class="menu-link">Повышение продаж</a></li>
-                            <li><a href="#" class="menu-link">Как стать партнером</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-content-menu4 col-lg-3 col-md-4 col-sm-4">
-                        <h1 class="footer-content-menu_title">ДОПОЛНИТЕЛЬНО</h1>
-                        <ul>
-                            <li><a href="#" class="menu-link">Договор-оферта</a></li>
-                            <li><a href="#" class="menu-link">Обработка данных</a></li>
-                            <li><a href="#" class="menu-link">Лицензионный договор</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-content-menu5 col-lg-2 col-md-4 col-sm-4">
-                        <h1 class="footer-content-menu_title">ИНТЕГРАЦИИ</h1>
-                        <ul>
-                            <li><a href="#" class="menu-link">CRM системы</a></li>
-                            <li><a href="#" class="menu-link">Телефония</a></li>
-                        </ul>
+                    <div class="col2 col-lg-3">
+                        <div class="footer-content-menu4 col-lg-12 col-md-4 col-sm-4">
+                            <h1 class="footer-content-menu_title">ДОПОЛНИТЕЛЬНО</h1>
+                            <ul>
+                                <li><a href="#" class="menu-link">Договор-оферта</a></li>
+                                <li><a href="#" class="menu-link">Обработка данных</a></li>
+                                <li><a href="#" class="menu-link">Лицензионный договор</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-content-menu5 col-lg-12 col-md-4 col-sm-4">
+                            <h1 class="footer-content-menu_title">ИНТЕГРАЦИИ</h1>
+                            <ul>
+                                <li><a href="#" class="menu-link">CRM системы</a></li>
+                                <li><a href="#" class="menu-link">Телефония</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-menu d-flex d-md-none">
@@ -1593,12 +1595,48 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="js/contactForm.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/intlTelInput-jquery.min.js"></script>
     <script src="js/jquery.maskedinput.js"></script>
-    <script src="js/slick.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.lazy.min.js"></script>
+    <script src="js/jquery.lazy.plugins.min.js"></script>
+    <script type="text/javascript" src="js/jquery.lazy.youtube.min.js"></script>
     <script src="js/index.js"></script>
+
+    <script>
+        var phone = document.getElementsByName('phone'), i = 0, arr = [], current;
+        $(phone).each(function () {
+            function phone_mask() {
+                $.mask.definitions['9'] = '';
+                $.mask.definitions['d'] = '[0-9]';
+                $(phone).mask("+7 (ddd) ddd-dd-dd");
+                $(phone).intlTelInput({
+                    autoHideDialCode: false,
+                    autoPlaceholder: "aggressive",
+                    placeholderNumberType: "MOBILE",
+                    preferredCountries: ['ru', 'th'],
+                    separateDialCode: true,
+                    utilsScript: "js/utils.js",
+                    customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
+                        return '+' + selectedCountryData.dialCode + ' ' + selectedCountryPlaceholder.replace(/[0-9]/g, '_');
+                    },
+                    geoIpLookup:function(callback){
+                    	$.get("http://ipinfo.io",function(){},"jsonp").always(function(resp){
+                    		var countryCode =(resp&&resp.country)?resp.country:"";
+                    		callback(countryCode);
+                    	});
+                    },
+                    initialCountry:"auto",
+                });
+                $(phone).on("close:countrydropdown", function (e, countryData) {
+                    $(this).val('');
+                    //var mask=$(this).closest('.intl-tel-input').find('.selected-dial-code').html()+' '+$(this).attr('placeholder').replace(/[0-9]/g,'d');
+                    $(this).mask($(this).attr('placeholder').replace(/[_]/g, 'd'));
+                });
+            }
+            phone_mask();
+        });
+    </script>
 </body>
 </html>

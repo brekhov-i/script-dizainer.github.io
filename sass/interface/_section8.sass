@@ -31,8 +31,6 @@
                 align-items: center
                 width: 800px
                 height: 336px
-                background: url(../image/section8/video-fon.jpeg) no-repeat center
-                background-size: cover
 
                 button
                     background: transparent
@@ -88,12 +86,28 @@
                 width: 100%
                 margin-bottom: 80px 
 
+                .selected-dial-code, .iti-arrow
+                    color: #fff !important
+
+                .iti-arrow
+                    border-top-color: #fff !important
+
                 input
                     background: transparent
                     border-width: 0
                     border-bottom: 2px solid #C4C4C4
                     width: 250px
                     padding-bottom: 5px
+                    color: #fff
+
+                    &::-webkit-input-placeholder 
+                        color: #fff
+                    &:-ms-input-placeholder
+                        color: #fff
+                    &::-ms-input-placeholder 
+                        color: #fff
+                    &::placeholder 
+                        color: #fff
 
             button[type="submit"]
                 width: 416px
