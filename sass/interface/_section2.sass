@@ -195,14 +195,67 @@
 
 @media (max-width: 450px)
     .section2
-        max-height: none
         height: auto
-        padding: 50px 0px
+        padding: 30px 0px
+        max-height: none
+
         &-content
-            display: flex
-            flex-direction: column
-            justify-content: flex-start
-            align-items: center
-            padding: 40px 10px 
+            padding: 50px 20px
+
             .section2-title
+                width: 70%
+                font-weight: 600
                 font-size: 14px
+                line-height: 20px
+
+            .cartochki
+                display: flex
+                justify-content: center
+                align-items: center
+                padding-top: 40px
+
+                .cart
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: center
+                    &-content
+                        width: 240px
+                        height: 140px
+                        border: 1px solid #FF8C22
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        h1
+                            font-size: 14px
+                            font-weight: normal
+                            text-align: center
+                            span
+                                font-size: 25px
+                                color: #FF8C22
+                                font-weight: bold
+                    .strelochka
+                        margin: 5px 0 10px
+                        
+                    .number1, .number2, .number3
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+                        margin-bottom: 20px
+
+                        p
+                            font-weight: 900
+                            font-size: 16px
+                            color: #FF8C22
+                            text-align: center
+                            margin-bottom: 10px
+
+                        h6
+                            font-weight: normal
+                            font-size: 13px
+                            text-align: center
+                    .number3
+                        margin-bottom: 10px
+
+                .cart-2, .cart-3

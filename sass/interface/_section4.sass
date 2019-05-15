@@ -144,6 +144,7 @@
 
 
             .carousel-indicators
+                left: 0
                 position: relative
                 width: 100%
                 margin: 0
@@ -236,7 +237,9 @@
                 .carousel-control-prev
                     margin-right: 20px
                 .carousel-control-next
-                    margin-left: 20px              
+                    margin-left: 20px      
+                    
+                            
 
 
 @media (max-width: 991px)
@@ -353,62 +356,194 @@
                                         p
                                             font-size: 8px !important
 
-@media (max-width: 470px)
+@media (max-width: 420px)
     .section4
+        position: relative
+        height: auto
+        background: url(../image/section4/section4-fon.svg) no-repeat top
+        background-position-y: -30px
+        background-size: cover
+        padding: 50px 0
+        padding-bottom: 0
+        &:after
+            z-index: 1
+            content: ''
+            position: absolute
+            bottom: 0
+            width: 100%
+            height: 30%
+            background: linear-gradient(180deg, rgba(34, 42, 57, 0) 0%, #10141C 100%)
         &-content
+            position: relative
+            z-index: 2
+            padding: 0px 0
+            padding-bottom: 0
             .section4-title
-                font-size: 16px !important
+                font-size: 14px
+                margin-bottom: 0
             #carouselExampleIndicators
-
-                .carousel-indicators
-                    .dot-1, .dot-2, .dot-3
-                        p
-                            font-size: 9px
-                        li
-                            &:after, &:before
-                                width: 50px !important
-                    .dot-1, .dot-3
-                        transform: translateY(-53px) !important
-
+                margin-top: 120px
                 .carousel-inner
                     .carousel-item
                         .carousel-slide
-                            padding: 50px 25px 50px 40px !important
+                            padding: 50px 30px
                             .content-block1
                                 .slide-title
-                                    font-size: 14px !important
+                                    font-size: 14px
                                 .row1, .row2, .row3
-                                    flex-direction: column
+                                    margin-top: 30px
                                     .col1, .col2
-                                        width: 100% !important
-                                        img
-                                            width: 100% !important
+                                        display: flex
+                                        flex-direction: column
+                                        justify-content: flex-start
+                                        width: 50%
 
                                         h1
-                                            font-size: 16px
+                                            font-weight: bold
+                                            font-size: 14px
+                                            margin-bottom: 20px
                                         
                                         ul
                                             color: #FF8C22
+                                            margin-left: 20px
                                             li
-                                                margin-bottom: 5px
+                                                margin-bottom: 10px
                                                 &:last-child
                                                     margin-bottom: 0
                                                 p
                                                     font-size: 12px
-                                .row2
-                                    flex-direction: column-reverse
+                                                    color: #000
+
+                                        img
+                                            margin-top: 10px
+                                            width: 80%
+                                            height: auto
+
                             .content-block2
+                                margin-top: 50px
 
                                 .slide-title
-                                    font-size: 14px
+                                    font-size: 12px
+                                    margin-bottom: 50px
+
                                 .row1, .row2, .row3
-                                    height: auto
-                                    .col1
-                                        padding-left: 15px
-                                    .col2
-                                        padding: 20px 5px
+                                    display: flex
+                                    width: 100%
+                                    height: 50px
+
+                                    .col1, .col2
+                                        display: flex
+                                        justify-content: flex-start
+                                        align-items: center
+                                        padding: 0 15px
+
                                         p
-                                            font-size: 6px !important
+                                            color: #fff
+                                            font-weight: bold
+                                            font-size: 15px
+                                            margin-left: 5px
+                                        
+                                        img
+                                            height: 30px
+
+                                    .col2
+                                        justify-content: flex-end
+
+                                        p
+                                            font-weight: normal
+                                            color: #000
+                                            font-size: 18px
+                                            text-align: right
+
+                                .row1
+                                    margin-bottom: 20px
+                                    .col1
+                                        width: 32.5%
+                                        background: linear-gradient(90deg, #FF8C22 0%, rgba(255, 140, 34, 0.33) 100%)
+                                    .col2
+                                        width: 67.5%
+                                        background: rgba(254, 210, 170, 0.33)
+
+                                .row2
+                                    margin-bottom: 20px
+                                    .col1
+                                        width: 27.5%
+                                        background: linear-gradient(270deg, rgba(255, 140, 34, 0.33) 0%, #FF8C22 100%)
+                                    .col2
+                                        width: 72.5%
+                                        background: rgba(254, 210, 170, 0.33)
+
+                                .row3
+                                    .col1
+                                        width: 40%
+                                        background: linear-gradient(89.66deg, #FF8C22 0.07%, rgba(255, 140, 34, 0.33) 97.59%)
+                                    
+                                    .col2
+                                        width: 60%
+                                        background: rgba(254, 210, 170, 0.33)
+                                
+                .carousel-indicators
+                    margin-bottom: 30px
+                    transition: 0.5s all
+                    &:before, &:after
+                        transform: translateY(-2.5px)
+                        width: 50%
+                        height: 5px
+
+                    .dot-1, .dot-2, .dot-3
+                        p
+                            font-size: 10px
+                        li
+                            width: 15px
+                            height: 15px
+                            border-width: 0
+                            &:after, &:before
+                                transform: translateY(4.5px)
+                                height: 5px
+                            
+                        &.active
+                            li
+                                &:after, &:before
+                                    background: #FF8C22
+                                
+                    .dot-1, .dot-3
+                        transform: translateY(-56.5px) !important
+                        z-index: 3
+                        li
+                            margin-top: 20px
+                    .dot-2
+                        z-index: 2
+                        transform: translateY(-7px)
+                        li
+                            margin-bottom: 20px
+
+                .numberslider
+                    width: 100%
+                    display: flex
+                    justify-content: center
+                    margin-bottom: 30px
+
+                    button
+                        background: transparent
+                        border-width: 0
+                    p
+                        font-size: 14px
+                        font-weight: normal
+                        color: #fff
+
+                        output
+                            font-weight: bold
+                    
+                    .carousel-control-next, .carousel-control-prev
+                        position: relative
+                        opacity: 1
+                        width: 30px
+                        img
+                            width: 100%
+                    .carousel-control-prev
+                        margin-right: 20px
+                    .carousel-control-next
+                        margin-left: 20px
 
 @media (max-width: 365px)
     .section4

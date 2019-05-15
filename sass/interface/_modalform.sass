@@ -12,12 +12,19 @@
                     flex-direction: column
                     justify-content: center
                     align-items: center
+                    padding: 0 !important
+                    margin-top: 0 !important
 
                     .form-input
                         width: 100%
                         margin-bottom: 20px
                         display: flex
                         flex-direction: column
+                        align-items: center
+
+                        input
+                            padding-bottom: 0
+                            width: 100% !important
                         
                         .password-field
                             margin-top: 30px
@@ -26,6 +33,9 @@
                         .login-field, .password-field, .name-field, .email-field
                             input
                                 padding-left: 10px
+                        .phone-field
+                            input
+                                padding-left: 10px !important
                         .field-block
                             width: 100%
                             height: 50px
@@ -46,3 +56,66 @@
                         font-size: 16px
                         text-align: center
                         width: 60%
+                        height: 50px
+
+@media (max-width: 991px)
+    // форма обратной связи
+    form.contactForm
+        padding: 0
+        input
+            width: 100% !important
+
+@media (max-width: 575px)
+    #registerform, #vhodform
+        .modal-dialog
+            margin: 0 auto
+            margin-top: 30px
+
+@media (max-width: 450px)
+    #registerform, #vhodform
+        .modal-dialog
+            width: 350px
+            .modal-content
+                padding: 20px 0
+
+                .modal-body
+                    form.contactForm
+                        .form-input
+                            margin-bottom: 20px
+
+                            .password-field
+                                margin-top: 30px
+                                margin-bottom: 30px !important
+
+                            .login-field, .password-field, .name-field, .email-field
+                                input
+                                    padding-left: 10px
+
+                            .login-field, .password-field
+                                label
+                                    font-size: 14px
+                            .phone-field
+                                input
+                                    padding-left: 10px !important
+                            .field-block
+                                width: 100%
+                                height: 40px
+                                margin-bottom: 20px
+
+                                &:last-child
+                                    margin-bottom: 0
+
+                                input
+                                    width: 100%
+                                    height: 100%
+                                    display: flex
+                                    border: 1px solid #FF8C22
+                                    font-size: 12px
+
+
+                        button[type="submit"]
+                            font-weight: normal
+                            font-size: 14px
+                            text-align: center
+                            width: 100%
+                            height: 40px

@@ -1,6 +1,9 @@
 @media (min-width: 1500px)
     .header
         min-height: 700px
+        display: flex
+        flex-direction: column
+        align-content: space-between
         &-bottom
             position: absolute
             left: 0
@@ -52,6 +55,9 @@
     height: 100vh
     background: url(../image/header/header-fon.jpeg) no-repeat top
     background-size: cover    
+    display: flex
+    flex-direction: column
+    align-content: space-between
     padding-top: 50px
     max-height: 1250px
 
@@ -94,10 +100,14 @@
                         color: #FF8C22     
 
     &-mane
-        height: 500px
+        height: auto !important
+        padding: 0px 0
+        margin: auto 0
         width: 100%
+        .container
+            height: auto !important
         &-content
-            height: 100%
+            height: auto
             display: flex
             width: 100%
             flex-direction: column
@@ -128,14 +138,13 @@
                 color: #fff
 
     &-bottom
-        position: absolute
-        left: 0
+        position: relative
         bottom: 0
         width: 100%
-        height: 180px
+        height: 160px
         display: flex
         flex-direction: column
-        justify-content: flex-end
+        justify-content: flex-center
         .point
             display: none
             position: relative
@@ -149,16 +158,19 @@
                 position: absolute 
             .point2
         &-content
-            height: 150px
+            height: 100%
 
             .content
                 display: flex
                 justify-content: flex-end
+                align-items: center
                 height: 100%
                 .cart
                     height: 100%
                     width: 300px
                     padding: 45px
+                    display: flex
+                    align-items: center
                     p
                         font-size: 18px
                         color: #ffffff
@@ -216,7 +228,7 @@
 
 @media (max-width: 991px)
     .header
-        min-height: 0px
+        min-height: 800px
         &-nav
             .navbar
                 .navbar-collapse
@@ -273,22 +285,26 @@
 @media (max-width: 768px)
     .header
         &-bottom
-            height: 150px
+            height: 130px
             &-content
                 width: 100%
-                height: 100%    
-                .cart
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    width: 33.333333% !important
-                    padding: 10px !important
-                    height: 100% !important
-                    p
-                        font-size: 12px !important
+                height: 100% 
+
+                .content
+                    justify-content: center   
+                    .cart
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 200px !important
+                        padding: 10px !important
+                        height: 100% !important
+                        p
+                            font-size: 14px !important
 
 @media (max-width: 575px)
     .header
+        height: 100vh
         &-nav
             .navbar
                 .navbar-collapse
@@ -333,32 +349,37 @@
 
 @media (max-width: 450px)
     .header
-        min-height: 0
+        min-height: 550px
         max-height: none
         height: 100vh
+        padding-top: 30px
         &-nav
             .navbar
+                &-brand
+                    width: 100px
+                    img
+                        width: 100%
                 .navbar-collapse
                     .nav 
                         flex-direction: column
                         .navbar-nav
-                            flex-direction: column
-                            justify-content: flex-end
+                            flex-direction: row
+                            justify-content: space-around
+                            flex-wrap: wrap
                             margin-right: 0
                             width: 100%  
                             .nav-item
-                                margin: 0
+                                margin: 0 10px
                                 a.nav-link
-                                    font-size: 12px
+                                    font-size: 14px
                         
                         .phone
-                            display: block
-                            display: flex
+                            display: none
                             align-items: center
                             a
                                 font-size: 12px
         &-mane
-            height: 400px
+            margin: auto 0
             &-content
                 align-items: center
 
@@ -368,17 +389,29 @@
                 p
                     text-align: center
                     margin-top: 35px
-                    font-size: 12px
+                    font-size: 14px
                 .header-button
                     margin-top: 28px
-                    width: 250px
-                    height: 45px
-                    font-size: 10px
+                    width: 270px
+                    height: 50px
+                    font-size: 12px
         &-bottom
+            width: 100%
             &-content
-                .cart
-                    p
-                        font-size: 10px !important
+                .content
+                    .cart
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        padding: 0 !important
+                        p
+                            max-width: none
+                            margin: 0 auto
+                            text-align: center
+                            width: auto
+                            font-size: 12px !important
+            .container
+                padding: 0 !important
 
 @media (max-width: 350px)
     .header

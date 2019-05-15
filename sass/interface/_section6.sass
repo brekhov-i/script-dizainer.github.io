@@ -12,14 +12,8 @@
         width: 100%
         
         .section6-title
-            text-align: center
-            font-weight: 600
             font-size: 30px
             margin-bottom: 20px
-            
-            span
-                color: #FF8C22
-                font-weight: 600
 
         .section6-text
             text-align: center
@@ -206,27 +200,57 @@
 @media (max-width: 450px)
     .section6
         padding: 50px 0
-        padding-top: 100px
+
         &-content
+            
             .section6-title
-                font-size: 20px
+                font-size: 14px
+                margin-bottom: 20px
+
+                span
+                    font-size: 16px
 
             .section6-text
-                font-size: 16px
+                font-size: 12px
+
             .cartochki
+                height: auto
+                margin-top: 30px
+                justify-content: center
+                align-items: center
+
                 .cart
-                    align-items: center
-                    justify-content: center
                     flex-direction: column
+                    align-items: center
+
+                    .col2
+                        margin-top: 30px
+                        width: 80%
+                        img
+                            width: 100%
+
                     .col1
-                        width: 100%
-                        height: auto
-                        margin-bottom: 20px
                         transform: translateX(0px) translateY(0px)
+                        background: #FDFDFD
+                        height: auto
+                        width: auto
+                        padding: 7px
+                        margin-bottom: 0px
+
                         .content
-                            padding: 40px 0px 0px 40px
+                            border: 1px solid rgba(0, 0, 0, 0.11)
+                            padding: 40px 60px 30px 50px
+                            display: flex
+                            flex-direction: column
+                            justify-content: flex-start
+
                             h1
-                                font-size: 10px
+                                font-weight: normal
+                                font-size: 12px
+                                text-align: left
+                                width: auto
+                                margin-bottom: 10px
+
                             ul
                                 color: #FF8C22
 
@@ -234,20 +258,15 @@
                                     p
                                         color: #000
                                         font-weight: normal
-                                        font-size: 8px
-
-                    .col2
-                        width: 70%
-                        img
-                            width: 100%
+                                        font-size: 12px
 
                 .cart-2
-                    margin-top: 50px
+                    flex-direction: column
                     .col1
                         position: relative
                         z-index: 2
-                        transform: translateX(0px) translateY(00px)
-                    
+                        transform: translateX(0px) translateY(0px)
                     .col2
-                        width: 70%
+                        position: relative
+                        z-index: 1
                         transform: translateX(0px)

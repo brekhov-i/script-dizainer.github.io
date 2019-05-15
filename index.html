@@ -8,21 +8,20 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Prata&amp;subset=cyrillic" rel="stylesheet">
     <!-- Theme style -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/intlTelInput.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/interface.css">
 </head>
 <body>
+    <!-- кнопка наверх -->
+    <button id="button-up"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
     <!-- модальные окна -->
 
     <div class="modal fade" id="registerform" tabindex="-1" role="dialog" aria-labelledby="registerformLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="registerformLabel">Регистрация</h5>
+                    <h5 class="modal-title" id="registerformLabel">Получить доступ</h5>
                     <button type="button" data-dismiss="modal" aria-label="Close" class="close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -33,18 +32,14 @@
                             <div class="field-block name-field">
                                 <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                             </div>
-                            <div class="field-block">
-                                <input type="tel" id="phone" class="field" required name="phone" placeholder="">
+                            <div class="field-block phone-field">
+                                <input type="tel" id="phone" class="field" required name="phone" placeholder="Ваш телефон">
                             </div>
                             <div class="field-block email-field">
                                 <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                             </div>
                         </div>
-                        <button id="button" class="btn button" type="submit">Зарегистрироваться</button>
-                        <div class="result">
-                            <span id="answer"></span>
-                            <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
-                        </div>
+                        <button id="button" class="btn button" type="submit">Попробовать бесплатно</button>    
                     </form>
                 </div>
             </div>
@@ -56,7 +51,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="vhodformLabel">Войти</h5>
+                    <h5 class="modal-title" id="vhodformLabel">Войти в личный кабинет</h5>
                     <button type="button" data-dismiss="modal" aria-label="Close" class="close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -86,7 +81,7 @@
         <div class="header-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark">
-                    <a class="navbar-brand" href="index.html"><img class="lazy" data-src="image/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.html"><img class="lazy" data-src="image/logo-head.png" alt="logo"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -189,7 +184,7 @@
     <section class="section2" id="hvatit">
         <div class="container">
             <div class="section2-content">
-                <h1 class="section2-title"><span>Хватит терять клиентов!</span><br>Создавайте эффективные алгоритмы звонков <br> в конструкторе скриптов продаж «Скрипт Дизайнер»</h1>
+                <h1 class="section2-title title"><span>Хватит терять клиентов!</span><br>Создавайте эффективные алгоритмы звонков <br> в конструкторе скриптов продаж «Скрипт Дизайнер»</h1>
                 <div class="cartochki">
                     <div class="cart cart-1">
                         <div class="cart-content">
@@ -198,7 +193,7 @@
                             правильных сценариев <br>
                             телефонных разговоров</h1>
                         </div>
-                        <img class="lazy" data-src="image/strelochka.svg" alt="стрелочка" class="strelochka">
+                        <img data-src="image/strelochka.svg" alt="стрелочка" class="strelochka lazy">
                         <div class="number1">
                             <p>01</p>
                             <h6>Создавайте скрипты любой <br>
@@ -223,7 +218,7 @@
                                 ошибок во время<br>
                                 общения с клиентами</h1>
                         </div>
-                        <img class="lazy" data-src="image/strelochka.svg" alt="стрелочка" class="strelochka">
+                        <img data-src="image/strelochka.svg" alt="стрелочка" class="strelochka lazy">
                         <div class="number1">
                             <p>01</p>
                             <h6>Выявляйте проблемные места<br>
@@ -247,7 +242,7 @@
                                 новичков и на 30% <br>
                                 меньше текучка кадров</h1>
                         </div>
-                        <img class="lazy" data-src="image/strelochka.svg" alt="стрелочка" class="strelochka">
+                        <img data-src="image/strelochka.svg" alt="стрелочка" class="strelochka lazy">
                         <div class="number1">
                             <p>01</p>
                             <h6>Отлаживайте скрипты на основе <br>
@@ -281,17 +276,13 @@
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="tel" >
+                            <input id="phone" class="field" name="phone" required type="tel" placeholder="Ваш телефон">
                         </div>
                         <div class="field-block">
                             <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">ХОЧУ БОЛЬШЕ УСПЕШНЫХ СДЕЛОК</button>
-                    <div class="result">
-                        <span id="answer"></span>
-                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
-                    </div>
                 </form>
             </div>
         </div>
@@ -301,7 +292,7 @@
     <section class="section4">
         <div class="container">
             <div class="section4-content">
-                <div class="section4-title">Что дало внедрение «Скрипт Дизайнера»<br> нашим клиентам</div>
+                <div class="section4-title title">Что дало внедрение «Скрипт Дизайнера»<br> нашим клиентам</div>
                 <div id="carouselExampleIndicators" class="carousel slide">
                     <ol class="carousel-indicators">
                         <div class="dot-1 active">
@@ -631,17 +622,13 @@
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="tel" >
+                            <input id="phone" class="field" name="phone" required type="tel" placeholder="Ваш телефон">
                         </div>
                         <div class="field-block">
                             <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">КОНЕЧНО, ХОЧУ!</button>
-                    <div class="result d-none">
-                        <span id="answer"></span>
-                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
-                    </div>
                 </form>
             </div>
         </div>
@@ -651,7 +638,7 @@
     <section class="section6">
         <div class="container">
             <div class="section6-content">
-                <h1 class="section6-title">Скрипты продаж действительно увеличивают<br> конверсию звонков <span>на 50-70 %</span> в 98 % случаев</h1>
+                <h1 class="section6-title title">Скрипты продаж действительно увеличивают<br> конверсию звонков <span>на 50-70 %</span> в 98 % случаев</h1>
                 <p class="section6-text">
                     Но вы все равно совнемаетесь, что этот инструмент принесет прибыль вашей компании?<br>
                     О повышении вашей конверсии уже позаботились!
@@ -671,7 +658,7 @@
                             </div>
                         </div>
                         <div class="col2">
-                            <img data-src="image/section6/img1.jpeg" alt="A.B">
+                            <img class="lazy" data-src="image/section6/img1.jpeg" alt="A.B">
                         </div>
                     </div>
                     <div class="cart cart-2">
@@ -710,17 +697,13 @@
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="tel" >
+                            <input id="phone" class="field" name="phone" required type="tel" placeholder="Ваш телефон">
                         </div>
                         <div class="field-block">
                             <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</button>
-                    <div class="result d-none">
-                        <span id="answer"></span>
-                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
-                    </div>
                 </form>
             </div>
         </div>
@@ -734,7 +717,7 @@
                 <span>«Скрипт Дизайнер» максимально прост в использовании</span></h1>
                 <div class="video">
                     <p>Посмотрите 2-минутный видео-ролик и убедитесь, как легко и удобно работать в программе</p>
-                    <div id="video" class="lazy" data-loader="youtubeLoader" data-video="LpjpF51Q9B4"></div>
+                    <div id="video" class="lazy" data-loader='youtubeLoader'></div>
                 </div>
                 <div class="vkladki">
                     <h1 class="vkladki-title">Благодаря нашей заботливой поддержке ни один <br>
@@ -767,7 +750,7 @@
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="tel" >
+                            <input id="phone" class="field" name="phone" required type="tel" placeholder="Ваш телефон">
                         </div>
                         <div class="field-block">
                             <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
@@ -775,10 +758,6 @@
                     </div>
                     <button id="button" class="btn button" type="submit">ПОЛЬЗОВАТЬСЯ «СКРИПТ ДИЗАЙНЕРОМ» <br>
                     БЕСПЛАТНО 14 ДНЕЙ</button>
-                    <div class="result d-none">
-                        <span id="answer"></span>
-                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
-                    </div>
                 </form>
             </div>
         </div>
@@ -885,18 +864,14 @@
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="tel" >
+                            <input id="phone" class="field" name="phone" required type="tel" placeholder="Ваш телефон">
                         </div>
                         <div class="field-block">
                             <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
-                    <button id="button" class="btn button" type="submit">ЗАРЕГИСТРИРОВАТЬСЯ И ПОЛУЧИТЬ БЕСПЛАТНЫЕ<br>
+                    <button id="button" class="btn max-btn button" type="submit">ЗАРЕГИСТРИРОВАТЬСЯ И ПОЛУЧИТЬ БЕСПЛАТНЫЕ<br>
                     ШАБЛОНЫ СКРИПТОВ ПРОДАЖ</button>
-                    <div class="result d-none">
-                        <span id="answer"></span>
-                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
-                    </div>
                 </form>
             </div>
         </div>
@@ -960,7 +935,7 @@
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="tel" >
+                            <input id="phone" class="field" name="phone" required type="tel" placeholder="Ваш телефон">
                         </div>
                         <div class="field-block">
                             <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
@@ -968,10 +943,6 @@
                     </div>
                     <button id="button" class="btn button" type="submit">ПОЛЬЗОВАТЬСЯ КОНСТРУКТОРОМ СКРИПТОВ <br>
                     ПРОДАЖ БЕСПЛАТНО 14 ДНЕЙ</button>
-                    <div class="result d-none">
-                        <span id="answer"></span>
-                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
-                    </div>
                 </form>
             </div>
         </div>
@@ -1038,7 +1009,7 @@
                                 сломался скрипт</p>
                         </div>
                         <div class="cart cart4">
-                            <img data-src="image/icon-galochka.png" alt="galochka">
+                            <img class="lazy" data-src="image/icon-galochka.png" alt="galochka">
                             <p class="text">В чем состоит недостаток<br>
                                 скрипта и какой узел<br>
                                 нужно исправить</p>
@@ -1062,17 +1033,13 @@
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="tel" >
+                            <input id="phone" class="field" name="phone" required type="tel" placeholder="Ваш телефон">
                         </div>
                         <div class="field-block">
                             <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">ПОПРОБУЙТЕ БЕСПЛАТНО 14 ДНЕЙ</button>
-                    <div class="result d-none">
-                        <span id="answer"></span>
-                        <span id="loader"><img new-icon data-src="images/loader.gif" alt=""></span>
-                    </div>
                 </form>
             </div>
         </div>
@@ -1137,14 +1104,14 @@
                                 <div class="item-content">
                                     <img data-src="image/section14/avatar.png" alt="avatar" class="avatar lazy">
                                     <div class="text">
-                                        <h2 class="title">Работать в СП одно удовольствие</h2>
-                                        <p>Сервис класс. Холодные звонки — это, <br>
-                                            оказывается, легко</p>
-                                        <p class="name">Наталья Хальцева</p>
+                                        <h2 class="title">Всё чётко и понятно</h2>
+                                        <p>Аналогов и вариантов по простоте<br> и удобству нет</p>
+                                        <p class="name">Лариса Шарок<br>
+                                            Руководитель КУ компании ТБМ</p>
                                         <div class="button-play">
                                             <button class="play" id="play1"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
                                             <button class="play" id="play2"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
-                                            <audio controls id="audio" data-src="audio/ХС и СД.mp3"></audio>
+                                            <audio controls id="audio" src="audio/ХСиСД.mp3"></audio>
                                             <p class="buuton-text">Прослушать аудио</p>
                                         </div>
                                         <p class="zapytie">,,</p>
@@ -1155,15 +1122,19 @@
                                 <div class="item-content">
                                     <img data-src="image/section14/avatar.png" alt="avatar" class="avatar lazy">
                                     <div class="text">
-                                        <h2 class="title">Работать в СП одно удовольствие</h2>
-                                        <p>Сервис класс. Холодные звонки — это, <br>
-                                            оказывается, легко</p>
-                                        <p class="name">Наталья Хальцева</p>
+                                        <h2 class="title">Всё чётко и понятно</h2>
+                                        <p>Аналогов и вариантов по простоте<br> и удобству нет</p>
+                                        <p class="name">Лариса Шарок<br>
+                                        Руководитель КУ компании ТБМ</p>
                                         <div class="button-play">
-                                            <button class="play" id="play3"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
-                                            <button class="play" id="play4"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
-                                            <audio controls id="audio1" data-src="audio/ХС и СД.mp3"></audio>
-                                            <p class="buuton-text">Прослушать аудио</p>
+                                            <button class="play" id="play3">
+                                                <img class="lazy" data-src="image/section14/play.png" alt="">
+                                            </button>
+                                            <button class="play" id="play4">
+                                                <img class="lazy" data-src="image/section14/play.png" alt="">
+                                            </button>
+                                            <audio controls id="audio1" src="audio/ХСиСД.mp3"></audio>
+                                            <p class="button-text">Прослушать аудио</p>
                                         </div>
                                         <p class="zapytie">,,</p>
                                     </div>
@@ -1173,14 +1144,14 @@
                                 <div class="item-content">
                                     <img data-src="image/section14/avatar.png" alt="avatar" class="avatar lazy">
                                     <div class="text">
-                                        <h2 class="title">Работать в СП одно удовольствие</h2>
-                                        <p>Сервис класс. Холодные звонки — это, <br>
-                                            оказывается, легко</p>
-                                        <p class="name">Наталья Хальцева</p>
+                                        <h2 class="title">Всё чётко и понятно</h2>
+                                        <p>Аналогов и вариантов по простоте<br> и удобству нет</p>
+                                        <p class="name">Лариса Шарок<br>
+                                            Руководитель КУ компании ТБМ</p>
                                         <div class="button-play">
                                             <button class="play" id="play5"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
                                             <button class="play" id="play6"><img class="lazy" data-src="image/section14/play.png" alt=""></button>
-                                            <audio controls id="audio2" data-src="audio/ХС и СД.mp3"></audio>
+                                            <audio controls id="audio2" src="audio/ХСиСД.mp3"></audio>
                                             <p class="buuton-text">Прослушать аудио</p>
                                         </div>
                                         <p class="zapytie">,,</p>
@@ -1208,17 +1179,13 @@
                                 <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                             </div>
                             <div class="field-block">
-                                <input id="phone" class="field" name="phone" required type="tel" >
+                                <input id="phone" class="field" name="phone" required type="tel" placeholder="Ваш телефон">
                             </div>
                             <div class="field-block">
                                 <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                             </div>
                         </div>
                         <button id="button" class="btn button" type="submit">ПОПРОБУЙТЕ БЕСПЛАТНО 14 ДНЕЙ</button>
-                        <div class="result d-none">
-                            <span id="answer"></span>
-                            <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
-                        </div>
                     </form>
                 </div>
             </div>
@@ -1247,7 +1214,7 @@
                                 <h1 class="cart-title">Проект 1</h1>
                                 <p class="cena">500 р/мес</p>
                                 <p class="polzovateli">1 пользователь</p>
-                                <p>экспорт скриптов<br>безлимитные звонки</p>
+                                <p>безлимитные звонки</p>
                                 <a href="#" class="btn button_cart" data-toggle="modal" data-target="#registerform">ПОДКЛЮЧИТЬ</a>
                             </div>
                         </div>
@@ -1322,7 +1289,6 @@
                                 <h1 class="cart-title">Колл-центр*</h1>
                                 <p class="cena">19 500 р/мес</p>
                                 <p class="polzovateli">100 пользователей</p>
-                                <p>запись разговоров по скриптам речевая аналитика звонков</p>
                                 <p>* У вас больше 100 сотрудников? 
                                 Оставьте заявку с пометкой «100+» 
                                 и получите выгодное предложение!</p>
@@ -1473,17 +1439,13 @@
                             <input id="name" class="field" name="name" required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="field-block">
-                            <input id="phone" class="field" name="phone" required type="tel" >
+                            <input id="phone" class="field" name="phone" required type="tel" placeholder="Ваш телефон">
                         </div>
                         <div class="field-block">
                             <input id="email" class="field" name="email" required type="email" placeholder="Ваш e-mail">
                         </div>
                     </div>
                     <button id="button" class="btn button" type="submit">ПОПРОБОВАТЬ «СКРИПТ ДИЗАЙНЕР»</button>
-                    <div class="result d-none">
-                        <span id="answer"></span>
-                        <span id="loader"><img class="lazy" data-src="images/loader.gif" alt=""></span>
-                    </div>
                     <p class="oferta">Нажимая кнопку «ПОПРОБОВАТЬ «СКРИПТ ДИЗАЙНЕР», <br>
                     вы акцептируете оферту и соглашаетесь <br>
                     на обработку персональных данных.</p>
@@ -1499,7 +1461,7 @@
                 <div class="footer-content-logo col-lg-2 col-md-4 col-sm-12">
                     <img data-src="image/logo.png" alt="logo" class="logo lazy">
                 </div>
-                <div class="row col-10 footer-menu d-none d-md-flex">
+                <div class="row col-lg-10 col-md-8 col-10 footer-menu d-none d-md-flex">
                     <div class="footer-content-menu col-lg-3 col-md-4 col-sm-4">
                         <h1 class="footer-content-menu_title">О КОМПАНИИ</h1>
                         <ul>
@@ -1511,7 +1473,7 @@
                             <li><a href="#" class="menu-link">Контакты</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col1">
+                    <div class="col-lg-3 col-md-4 col1">
                         <div class="footer-content-menu2 col-lg-12 col-md-4 col-sm-4">
                             <h1 class="footer-content-menu_title">ПОМОЩЬ</h1>
                             <ul>
@@ -1529,7 +1491,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col2 col-lg-3">
+                    <div class="col2 col-lg-3 col-md-4">
                         <div class="footer-content-menu4 col-lg-12 col-md-4 col-sm-4">
                             <h1 class="footer-content-menu_title">ДОПОЛНИТЕЛЬНО</h1>
                             <ul>
@@ -1592,51 +1554,37 @@
                     </div>
                 </div>
             </div>
+            <p class="zashita">Все права защищены (с) 2015-2019 дочерний проект B2B basis, +7 (499) 426-3522</p>
         </div>
     </footer>
 
+    <script type="text/javascript">
+        var head = document.head
+            , link = document.createElement('link');
+
+        link.type = 'text/css';
+        link.rel = 'stylesheet';
+        link.href = '{{ css_file }}';
+        head.appendChild(link);
+    </script>
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/intlTelInput-jquery.min.js"></script>
     <script src="js/jquery.maskedinput.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.lazy.min.js"></script>
-    <script src="js/jquery.lazy.plugins.min.js"></script>
-    <script type="text/javascript" src="js/jquery.lazy.youtube.min.js"></script>
+    <script src="js/jquery.lazy.youtube.min.js"></script>
     <script src="js/index.js"></script>
 
     <script>
         var phone = document.getElementsByName('phone'), i = 0, arr = [], current;
         $(phone).each(function () {
-            function phone_mask() {
-                $.mask.definitions['9'] = '';
-                $.mask.definitions['d'] = '[0-9]';
-                $(phone).mask("+7 (ddd) ddd-dd-dd");
-                $(phone).intlTelInput({
-                    autoHideDialCode: false,
-                    autoPlaceholder: "aggressive",
-                    placeholderNumberType: "MOBILE",
-                    preferredCountries: ['ru', 'th'],
-                    separateDialCode: true,
-                    utilsScript: "js/utils.js",
-                    customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
-                        return '+' + selectedCountryData.dialCode + ' ' + selectedCountryPlaceholder.replace(/[0-9]/g, '_');
-                    },
-                    geoIpLookup:function(callback){
-                    	$.get("http://ipinfo.io",function(){},"jsonp").always(function(resp){
-                    		var countryCode =(resp&&resp.country)?resp.country:"";
-                    		callback(countryCode);
-                    	});
-                    },
-                    initialCountry:"auto",
-                });
-                $(phone).on("close:countrydropdown", function (e, countryData) {
-                    $(this).val('');
-                    //var mask=$(this).closest('.intl-tel-input').find('.selected-dial-code').html()+' '+$(this).attr('placeholder').replace(/[0-9]/g,'d');
-                    $(this).mask($(this).attr('placeholder').replace(/[_]/g, 'd'));
-                });
-            }
-            phone_mask();
+            $(function () {
+                //2. Получить элемент, к которому необходимо добавить маску
+                $(phone).mask("+99999999?999999");
+            });
         });
+        $("head").append("<link rel='stylesheet' type='text/css' href='css/interface.css' />");
+        $("head").append("<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' ntegrity = 'sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf' crossorigin = 'anonymous' >");
+        $("head").append("<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Prata&amp;subset=cyrillic' rel='stylesheet'>");
     </script>
 </body>
 </html>
